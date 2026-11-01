@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Received Received from Acme Payroll (fictional) payroll.demo@demobank ₹45,000.00 30 Sep 2026, 08:00 AM SAL-OCT-2026 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "refund_credit",
+        "amountRaw": "₹45,000.00",
+        "currency": "INR",
+        "referenceRaw": "SAL-OCT-2026",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Received",
+        "directionRaw": "Received from",
+        "dateRaw": "30 Sep 2026, 08:00 AM",
+        "counterpartyRaw": "Acme Payroll (fictional) (payroll.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹45,000.00 · SAL-OCT-2026",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

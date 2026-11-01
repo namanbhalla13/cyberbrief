@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "Update: the seller says my 3,300 was refunded yesterday but I see nothing in my bank yet.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 3300",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "received",
+        "dateRaw": "yesterday",
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "Update: the seller says my 3,300 was refunded yesterday but I see nothing in my ",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

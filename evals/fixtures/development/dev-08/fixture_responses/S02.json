@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Successful Paid to Gadget Galaxy Deals gadgetgalaxy.demo@demobank ₹9,800.00 14 Oct 2026, 09:10 AM DEMO-C8-0002 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹9,800.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-C8-0002",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Successful",
+        "directionRaw": "Paid to",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "Gadget Galaxy Deals (gadgetgalaxy.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹9,800.00 · DEMO-C8-0002",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

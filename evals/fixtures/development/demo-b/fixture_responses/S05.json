@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I ordered a phone from Gadget Galaxy Deals on 15 October 2026 after a social media ad and paid INR 20,000 in two UPI payments of INR 10,000 each. The phone never arrived and the seller blocked me.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 20,000",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid",
+        "dateRaw": "15 October 2026",
+        "counterpartyRaw": "Gadget Galaxy Deals",
+        "accountScopeRaw": null,
+        "supportingQuote": "paid INR 20,000 in two UPI payments",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

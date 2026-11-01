@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "official_communication",
+    "language": "en",
+    "visibleText": "Demo Cyber Helpdesk (fictional) Complaint acknowledgement Complaint reference: HO10-ACK-5501 Date: 18 Oct 2026 Your complaint has been registered and acknowledged.",
+    "observations": [
+      {
+        "kind": "status_message",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": "HO10-ACK-5501",
+        "referenceType": "complaint reference",
+        "statusRaw": "Your complaint has been registered and acknowledged.",
+        "directionRaw": null,
+        "dateRaw": "18 Oct 2026",
+        "counterpartyRaw": "Demo Cyber Helpdesk (fictional)",
+        "accountScopeRaw": null,
+        "supportingQuote": "Your complaint has been registered and acknowledged.",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

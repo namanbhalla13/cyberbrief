@@ -1,0 +1,187 @@
+{
+  "packId": "dev-04",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Two chat confirmations plus a byte-identical re-upload",
+  "tags": [
+    "layout_c",
+    "byte_duplicate"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "8a7a49b966bd69ae7b566fe78b76eb994e2feac42565450b237574a24de92593",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "300000",
+          "currency": "INR",
+          "reference": "QU-7781-01",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "5f7733d095444bf6ccd82636fccba5c1bd110ec35cdb8a9b04f8562b68717819",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "450000",
+          "currency": "INR",
+          "reference": "QU-7781-02",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "S03",
+      "file": "S03.png",
+      "sha256": "8a7a49b966bd69ae7b566fe78b76eb994e2feac42565450b237574a24de92593",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "byteDuplicateOf": "S01",
+      "expectedObservations": [
+        {
+          "amountMinor": "300000",
+          "currency": "INR",
+          "reference": "QU-7781-01",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "identical bytes to S01; same file re-uploaded"
+          ],
+          "byteDuplicateOf": "S01"
+        }
+      ],
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "T01",
+      "file": "T01.txt",
+      "sha256": "b287045ad1a7c6c3fc7bb288a51401f1981358310a5191c61273753a79f3ddb5",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "expectedObservations": [
+        {
+          "claimText": "Two payments of 3,000 and 4,500 rupees to Gadget Galaxy Deals. Total 7,500. Nothing delivered.",
+          "refundClaimed": false
+        }
+      ],
+      "fixtureResponse": "fixture_responses/T01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "QU-7781-01",
+        "amountMinor": "300000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "reference": "QU-7781-02",
+        "amountMinor": "450000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S02"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "750000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "750000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

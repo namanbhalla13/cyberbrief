@@ -1,0 +1,16 @@
+.git
+.env
+.env.*
+data/
+**/node_modules
+frontend/dist
+frontend/screens
+frontend/test-results
+frontend/playwright-report
+backend/.venv
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+evals/reports
+docs
+Main_md_file

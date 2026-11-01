@@ -1,0 +1,133 @@
+{
+  "packId": "ho-06",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Same reference, different amounts",
+  "tags": [
+    "amount_conflict"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "e3341deb7a56e68c58837ec6aa02d3480697e9a8701d3ebffde493d03be6b25c",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "200000",
+          "currency": "INR",
+          "reference": "HO6-SAME-01",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "5c5f85922d2fcd0f758192edc54b6cdb4003d4e985e9fdca88af7dd325e41a6f",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        420
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "220000",
+          "currency": "INR",
+          "reference": "HO6-SAME-01",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_b",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": false,
+            "date": true
+          },
+          "notes": [
+            "conflicting amounts for one identity must block the reviewed total until resolved"
+          ]
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO6-SAME-01",
+        "amountMinor": "200000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01",
+          "S02"
+        ],
+        "amountConflict": true
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [
+      [
+        "S01",
+        "S02"
+      ]
+    ],
+    "excluded": [],
+    "citizenReportedAmountMinor": "200000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "0",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

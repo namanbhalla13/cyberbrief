@@ -1,0 +1,97 @@
+{
+  "spec": {
+    "name": "S04",
+    "amount_text": "\u20b95,000.00",
+    "reference": "DEMO-A-003",
+    "reference_label": "UPI Ref No",
+    "status": "pending",
+    "direction": "debit",
+    "date_text": "13 Oct 2026, 09:15 AM",
+    "payee_name": "Trendy Threads Store",
+    "payee_vpa": "trendythreads.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    720,
+    1280
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 47,
+      "width": 162,
+      "height": 34,
+      "text": "DemoPay"
+    },
+    "status": {
+      "x": 192,
+      "y": 414,
+      "width": 335,
+      "height": 39,
+      "text": "Payment Pending"
+    },
+    "direction": {
+      "x": 320,
+      "y": 480,
+      "width": 80,
+      "height": 19,
+      "text": "Paid to"
+    },
+    "payee": {
+      "x": 199,
+      "y": 519,
+      "width": 322,
+      "height": 31,
+      "text": "Trendy Threads Store"
+    },
+    "payee_vpa": {
+      "x": 199,
+      "y": 559,
+      "width": 322,
+      "height": 22,
+      "text": "trendythreads.demo@demobank"
+    },
+    "amount": {
+      "x": 196,
+      "y": 647,
+      "width": 327,
+      "height": 60,
+      "text": "\u20b95,000.00"
+    },
+    "date": {
+      "x": 239,
+      "y": 729,
+      "width": 242,
+      "height": 20,
+      "text": "13 Oct 2026, 09:15 AM"
+    },
+    "reference": {
+      "x": 72,
+      "y": 879,
+      "width": 174,
+      "height": 20,
+      "text": "DEMO-A-003"
+    },
+    "payer_vpa": {
+      "x": 72,
+      "y": 978,
+      "width": 315,
+      "height": 24,
+      "text": "citizen.demo@demobank"
+    },
+    "status_detail": {
+      "x": 72,
+      "y": 1078,
+      "width": 102,
+      "height": 27,
+      "text": "Pending"
+    }
+  }
+}

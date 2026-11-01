@@ -1,0 +1,98 @@
+{
+  "spec": {
+    "name": "S03",
+    "amount_text": "\u20b9860.00",
+    "reference": "HO8-GROC-03",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "14 Oct 2026, 09:10 AM",
+    "payee_name": "FreshBasket Grocers",
+    "payee_vpa": "freshbasket.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    720,
+    1280
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 47,
+      "width": 162,
+      "height": 34,
+      "text": "DemoPay"
+    },
+    "status": {
+      "x": 174,
+      "y": 414,
+      "width": 371,
+      "height": 39,
+      "text": "Payment Successful"
+    },
+    "direction": {
+      "x": 320,
+      "y": 480,
+      "width": 80,
+      "height": 19,
+      "text": "Paid to"
+    },
+    "payee": {
+      "x": 208,
+      "y": 519,
+      "width": 303,
+      "height": 24,
+      "text": "FreshBasket Grocers"
+    },
+    "payee_vpa": {
+      "x": 211,
+      "y": 559,
+      "width": 298,
+      "height": 19,
+      "text": "freshbasket.demo@demobank"
+    },
+    "amount": {
+      "x": 227,
+      "y": 647,
+      "width": 266,
+      "height": 52,
+      "text": "\u20b9860.00"
+    },
+    "date": {
+      "x": 239,
+      "y": 729,
+      "width": 242,
+      "height": 20,
+      "text": "14 Oct 2026, 09:10 AM"
+    },
+    "reference": {
+      "x": 72,
+      "y": 879,
+      "width": 188,
+      "height": 20,
+      "text": "HO8-GROC-03"
+    },
+    "payer_vpa": {
+      "x": 72,
+      "y": 978,
+      "width": 315,
+      "height": 24,
+      "text": "citizen.demo@demobank"
+    },
+    "status_detail": {
+      "x": 72,
+      "y": 1078,
+      "width": 128,
+      "height": 21,
+      "text": "Successful"
+    }
+  }
+}

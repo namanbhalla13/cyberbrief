@@ -1,0 +1,105 @@
+{
+  "version": "2",
+  "dataset": "backend/app/demo_investigation.py: nine base fictional reports plus seventeen more (build_eval_extras), 26 in all. A check of the search rules on made-up cases; it says nothing about real-world accuracy.",
+  "authoring": "Every expectation below was written by hand from how each report was designed, before the scoring script existed. None was produced by running the search and copying what came back.",
+  "kind_order": ["exact_identifier", "possible_duplicate", "generic_identifier", "similar_method", "similar_name"],
+  "queries": [
+    {
+      "id": "Q1", "category": "exact match, duplicate report, generic service id, weak leads, scope", "case": "current", "viewer": "arjun",
+      "question": "Arjun asks for earlier reports connected to the sports-shoes report.",
+      "expect": {
+        "exact_identifier": ["earlier_partial", "unresolved", "duplicate"],
+        "generic_identifier": ["generic"],
+        "similar_method": ["method_only"],
+        "similar_name": ["similar_name"],
+        "absent": ["late_match", "x_rep1", "x_hub_earlier"],
+        "out_of_scope": ["out_of_scope"]
+      },
+      "checks": {"same_report_as": {"earlier_partial": ["duplicate"], "duplicate": ["earlier_partial"]}},
+      "reasons": {
+        "earlier_partial": "Same whole recipient UPI ID in a report Arjun may search (Meera's, same area, with the discovery capability).",
+        "unresolved": "Same whole recipient UPI ID; still unresolved, so it must not be offered as a solved precedent.",
+        "duplicate": "Same whole recipient UPI ID. It also repeats another report's transaction reference (one payment reported twice).",
+        "generic": "Same UPI ID as the second payment, but it names a marketplace service, not one seller.",
+        "method_only": "No identifier is shared; both accounts say an advance was paid and the goods never came. A weak lead only.",
+        "similar_name": "A similar shop name with a different recipient UPI ID. A name alone is not a link.",
+        "late_match": "Nothing in common with this report: no identifier, name or reported method.",
+        "out_of_scope": "Shares the recipient UPI ID but belongs to an officer in another area. It must not appear, be counted or be hinted at."
+      }
+    },
+    {
+      "id": "Q2", "category": "no match", "case": "late_match", "viewer": "meera",
+      "question": "Meera asks about a report with a recipient nobody else names.",
+      "expect": {"absent": ["current", "earlier_partial", "unresolved", "duplicate", "similar_name", "method_only", "generic"], "out_of_scope": ["out_of_scope"]},
+      "reasons": {"all": "A different recipient, a different shop and no similar story: nothing should be returned."}
+    },
+    {
+      "id": "Q3", "category": "generic service id", "case": "generic", "viewer": "meera",
+      "question": "Meera asks about the marketplace-service report.",
+      "expect": {"generic_identifier": ["current"], "absent": ["earlier_partial", "unresolved", "duplicate", "similar_name", "method_only", "late_match"], "out_of_scope": ["out_of_scope"]},
+      "reasons": {"current": "Shares only a generic service identifier: shown, but labelled as unable to point at one seller."}
+    },
+    {
+      "id": "Q4", "category": "scope: another area", "case": "out_of_scope", "viewer": "divya",
+      "question": "Divya, in another area, asks about her own report.",
+      "expect": {"absent": ["current", "earlier_partial", "unresolved", "duplicate", "similar_name", "method_only", "generic", "late_match"], "out_of_scope": ["current", "earlier_partial", "unresolved", "duplicate"]},
+      "reasons": {"all": "Every matching report belongs to officers outside Divya's scope: nothing may be returned or hinted at."}
+    },
+    {
+      "id": "Q5", "category": "repeated recipient, duplicate copy", "case": "x_rep_current", "viewer": "arjun",
+      "question": "Arjun asks about a report whose recipient four earlier, independent reports also name (one of them reported twice).",
+      "expect": {"exact_identifier": ["x_rep1", "x_rep2", "x_rep3", "x_rep4", "x_rep_copy"], "similar_name": ["x_masked"], "absent": ["x_hub_earlier", "x_contra_earlier", "x_fix_target", "x_perm_earlier"]},
+      "checks": {"attribution_note": {"cases": ["x_rep1", "x_rep2", "x_rep3", "x_rep4"], "independentReports": 4}, "same_report_as": {"x_rep1": ["x_rep_copy"], "x_rep_copy": ["x_rep1"]}},
+      "reasons": {"x_rep1": "Four independent earlier reports name this recipient. The match stays exact; it carries a note that a repeated recipient is a pattern to review, not proof of one person.",
+                  "x_rep_copy": "The same payment as x_rep1 reported again: counted once, so the independent count stays four.",
+                  "x_masked": "A masked identifier with the same payee name: never an exact match, at most a weak lead by name."}
+    },
+    {
+      "id": "Q6", "category": "known payment hub", "case": "x_hub_current", "viewer": "arjun",
+      "question": "Arjun asks about a report that pays a known payment-hub handle.",
+      "expect": {"generic_identifier": ["x_hub_earlier"], "absent": ["x_rep1", "x_contra_earlier"]},
+      "checks": {"attribution_limit": ["x_hub_earlier"]},
+      "reasons": {"x_hub_earlier": "The same handle, but it belongs to a hub that many unrelated buyers pay: a real match with an explicit limit on what it shows."}
+    },
+    {
+      "id": "Q7", "category": "contradictory details", "case": "x_contra_current", "viewer": "arjun",
+      "question": "Arjun asks about a report whose recipient appears elsewhere under a different name.",
+      "expect": {"exact_identifier": ["x_contra_earlier"], "absent": ["x_hub_earlier", "x_rep1"]},
+      "checks": {"contradictions_min": {"x_contra_earlier": 1}},
+      "reasons": {"x_contra_earlier": "Same whole UPI ID, but this report calls the recipient Brightwear Studio and the earlier one Glowcart Fashions: the match holds and the difference is listed as something to look at."}
+    },
+    {
+      "id": "Q8", "category": "missing reference", "case": "x_missing_current", "viewer": "arjun",
+      "question": "Arjun asks about a report with a masked recipient and a cut-off reference.",
+      "expect": {"absent": ["x_rep1", "x_hub_earlier", "x_contra_earlier", "x_fix_target", "x_perm_earlier", "earlier_partial"]},
+      "checks": {"missing_data": ["recipient_upi_complete", "transaction_reference"]},
+      "reasons": {"all": "Nothing complete to search by, so nothing is searched by it, and the response says which details are missing."}
+    },
+    {
+      "id": "Q9", "category": "source correction", "case": "x_fix_current", "viewer": "arjun",
+      "question": "Arjun asks, then the citizen corrects the recipient, then he asks again.",
+      "expect": {"absent": ["x_fix_target", "x_rep1", "x_perm_earlier"]},
+      "after_correction": {"case": "x_fix_current", "recipient": "newshop", "expect": {"exact_identifier": ["x_fix_target"]}},
+      "reasons": {"x_fix_target": "Not related before the correction; an exact match after the citizen corrects the recipient to the target's."}
+    },
+    {
+      "id": "Q10", "category": "changed permissions", "case": "x_perm_current", "viewer": "arjun",
+      "question": "Arjun asks, then loses the right to search colleagues' reports, then asks again.",
+      "expect": {"exact_identifier": ["x_perm_earlier"]},
+      "after_revocation": {"viewer": "arjun", "capability": "area_discovery", "expect": {"absent": ["x_perm_earlier"], "returned": 0}},
+      "reasons": {"x_perm_earlier": "Found while the discovery power is held; neither it nor its officer may appear once the power is withdrawn."}
+    }
+  ],
+  "runs": [
+    {"id": "R1", "kind": "known_match", "case": "current", "viewer": "arjun",
+     "goal": "Investigate this report: find earlier complaints with the same recipient, show how they were handled and prepare next steps.",
+     "expect": {"states": ["waiting_for_approval"], "tools": ["search_related_cases", "compare_cases", "get_case_handling_history", "draft_officer_consultation", "prepare_action_plan"], "consultation": "drafted", "unsent": true},
+     "note": "Revised 31 Oct after the first live run. The first version also required get_resolution_playbook and inspect_evidence_gaps, copied from the fixed-rules plan; the live model legitimately chose the report brief instead of the gaps card (the plan tool computes the gaps itself). The outcome being asked for is: the match found, compared, its handling read, a question for its officer drafted and a plan prepared. The failed first live attempt is kept in docs/qa-final-20261031/live-eval-first-attempt-FAILED.md."},
+    {"id": "R2", "kind": "no_match", "case": "x_alone", "viewer": "meera",
+     "goal": "Investigate this report: find earlier complaints with the same recipient, show how they were handled and prepare next steps.",
+     "expect": {"states": ["completed", "waiting_for_approval"], "tools": ["search_related_cases"], "consultation": "none", "finding_contains": "No earlier report"}},
+    {"id": "R3", "kind": "missing_evidence", "case": "x_missing_current", "viewer": "arjun",
+     "goal": "Investigate this report: find earlier complaints with the same recipient, show how they were handled and prepare next steps.",
+     "expect": {"states": ["completed", "waiting_for_approval"], "tools": ["search_related_cases"], "consultation": "none", "finding_contains": "not possible"}}
+  ]
+}

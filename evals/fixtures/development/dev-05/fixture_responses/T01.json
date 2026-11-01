@@ -1,0 +1,30 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I paid around six thousand two hundred fifty rupees but the screenshot is blurry.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid",
+        "dateRaw": null,
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "I paid around six thousand two hundred fifty rupees but the screenshot is blurry",
+        "issues": [
+          "amount_missing"
+        ]
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

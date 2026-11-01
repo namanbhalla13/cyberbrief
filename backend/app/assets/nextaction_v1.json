@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["proposals"],
+  "properties": {
+    "proposals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "title", "reason", "paymentIds", "noteDraft"],
+        "properties": {
+          "kind": { "type": "string", "enum": ["run_bank_check", "request_more_information", "record_packet_reviewed", "agree_closure", "wait"] },
+          "title": { "type": "string" },
+          "reason": { "type": "string" },
+          "paymentIds": { "type": "array", "items": { "type": "string" } },
+          "noteDraft": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

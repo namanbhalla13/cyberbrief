@@ -1,0 +1,101 @@
+{
+  "spec": {
+    "name": "S01",
+    "amount_text": "\u20b96,250.00",
+    "reference": "DEMO-C5-0042",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "14 Oct 2026, 09:10 AM",
+    "payee_name": "Trendy Threads Store",
+    "payee_vpa": "trendythreads.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "jpg",
+    "crop": null,
+    "degrade": {
+      "blur": 3.5,
+      "downscale": 0.6
+    },
+    "seed": 1
+  },
+  "imageSize": [
+    432,
+    768
+  ],
+  "regions": {
+    "app_name": {
+      "x": 17,
+      "y": 28,
+      "width": 97,
+      "height": 20,
+      "text": "DemoPay"
+    },
+    "status": {
+      "x": 104,
+      "y": 248,
+      "width": 223,
+      "height": 23,
+      "text": "Payment Successful"
+    },
+    "direction": {
+      "x": 192,
+      "y": 288,
+      "width": 48,
+      "height": 11,
+      "text": "Paid to"
+    },
+    "payee": {
+      "x": 119,
+      "y": 311,
+      "width": 193,
+      "height": 19,
+      "text": "Trendy Threads Store"
+    },
+    "payee_vpa": {
+      "x": 119,
+      "y": 335,
+      "width": 193,
+      "height": 13,
+      "text": "trendythreads.demo@demobank"
+    },
+    "amount": {
+      "x": 118,
+      "y": 388,
+      "width": 196,
+      "height": 36,
+      "text": "\u20b96,250.00"
+    },
+    "date": {
+      "x": 143,
+      "y": 437,
+      "width": 145,
+      "height": 12,
+      "text": "14 Oct 2026, 09:10 AM"
+    },
+    "reference": {
+      "x": 43,
+      "y": 527,
+      "width": 122,
+      "height": 12,
+      "text": "DEMO-C5-0042"
+    },
+    "payer_vpa": {
+      "x": 43,
+      "y": 587,
+      "width": 189,
+      "height": 14,
+      "text": "citizen.demo@demobank"
+    },
+    "status_detail": {
+      "x": 43,
+      "y": 647,
+      "width": 77,
+      "height": 13,
+      "text": "Successful"
+    }
+  }
+}

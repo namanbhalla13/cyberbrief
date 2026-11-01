@@ -1,0 +1,12 @@
+{
+  "evalId": "ho-03-off-topic-hindi",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "आज मौसम कैसा है?",
+      "expect": {
+        "offTopic": true
+      }
+    }
+  ]
+}

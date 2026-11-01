@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "Two payments of 3,000 and 4,500 rupees to Gadget Galaxy Deals. Total 7,500. Nothing delivered.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 3000",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid",
+        "dateRaw": null,
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "Two payments of 3,000 and 4,500 rupees to Gadget Galaxy Deals. Total 7,500. Noth",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "transcript": "I ordered a phone from Gadget Galaxy Deals on the fifteenth of October and paid twenty thousand rupees in two payments of ten thousand each. The phone never arrived and the seller blocked me.",
+  "audioDurationMs": 11667,
+  "turns": [
+    {
+      "turnId": 0,
+      "startMs": 0,
+      "endMs": 11667,
+      "transcript": "I ordered a phone from Gadget Galaxy Deals on the fifteenth of October and paid twenty thousand rupees in two payments of ten thousand each. The phone never arrived and the seller blocked me."
+    }
+  ],
+  "labelProvenance": "authored script spoken by Windows SAPI TTS (English voice); not model output"
+}

@@ -1,0 +1,70 @@
+{
+  "spec": {
+    "name": "S01",
+    "amount_text": "\u20b95,000.00",
+    "reference": "HO9-D-0001",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "14 Oct 2026, 09:10 AM",
+    "payee_name": "Trendy Threads Store",
+    "payee_vpa": "trendythreads.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_b",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    900,
+    420
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 30,
+      "width": 136,
+      "height": 27,
+      "text": "PayLedger"
+    },
+    "date": {
+      "x": 28,
+      "y": 167,
+      "width": 98,
+      "height": 13,
+      "text": "14 Oct 2026"
+    },
+    "direction": {
+      "x": 200,
+      "y": 167,
+      "width": 66,
+      "height": 15,
+      "text": "UPI/DR/"
+    },
+    "reference": {
+      "x": 265,
+      "y": 167,
+      "width": 105,
+      "height": 13,
+      "text": "HO9-D-0001"
+    },
+    "payee": {
+      "x": 200,
+      "y": 192,
+      "width": 148,
+      "height": 16,
+      "text": "Trendy Threads Store"
+    },
+    "amount": {
+      "x": 590,
+      "y": 167,
+      "width": 80,
+      "height": 15,
+      "text": "\u20b95,000.00"
+    }
+  }
+}

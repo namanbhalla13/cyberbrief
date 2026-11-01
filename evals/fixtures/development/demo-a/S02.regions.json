@@ -1,0 +1,44 @@
+{
+  "spec": {
+    "name": "S02",
+    "amount_text": "\u20b910,000.00",
+    "reference": "DEMO-A-001",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "12 Oct 2026, 10:42 AM",
+    "payee_name": "Trendy Threads Store",
+    "payee_vpa": "trendythreads.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "jpg",
+    "crop": "amount_ref_only",
+    "degrade": {
+      "downscale": 0.85,
+      "jpeg_quality": 80
+    },
+    "seed": 1
+  },
+  "imageSize": [
+    612,
+    251
+  ],
+  "regions": {
+    "amount": {
+      "x": 150,
+      "y": 17,
+      "width": 313,
+      "height": 51,
+      "text": "\u20b910,000.00"
+    },
+    "reference": {
+      "x": 61,
+      "y": 214,
+      "width": 148,
+      "height": 17,
+      "text": "DEMO-A-001"
+    }
+  }
+}

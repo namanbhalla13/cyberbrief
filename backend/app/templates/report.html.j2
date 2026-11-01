@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>CyberBrief packet · {{ case.title }} · revision {{ case.current_revision }}</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 24px; color: #111; line-height: 1.4; }
+  h1 { margin: 0 0 6px; } h2 { margin: 28px 0 8px; font-size: 1.15rem; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: #f3f4f6; }
+  .label { display: inline-block; padding: 2px 9px; border-radius: 10px; background: #e8eaf0; font-size: 12px; margin: 0 6px 6px 0; }
+  .warn { background: #fff4e5; border: 1px solid #f0c080; padding: 10px 12px; border-radius: 6px; }
+  .muted { color: #555; } .mono { font-family: ui-monospace, Consolas, monospace; font-size: 12px; }
+  img.thumb { max-width: 150px; max-height: 150px; border: 1px solid #ccc; }
+  blockquote { margin: 6px 0 12px; padding: 8px 12px; border-left: 3px solid #bbb; background: #fafafa; white-space: pre-wrap; }
+  @media print { body { margin: 12mm; } .label { border: 1px solid #999; } }
+</style>
+</head>
+<body>
+<h1>CyberBrief case packet</h1>
+<p>{% for l in labels %}<span class="label">{{ l.replace("_", " ") }}</span>{% endfor %}</p>
+<div class="warn">
+  This packet organises supplied information for human review. It does not verify payments, authenticate documents,
+  determine guilt, calculate a legal loss, or change any official complaint. Generated {{ generated_at }} from case
+  revision {{ case.current_revision }} (generator v{{ generation_version }}). Evidence IDs below refer to the evidence index at the end.
+</div>
+
+<h2>Case</h2>
+<table>
+  <tr><th style="width:28%">Case ID</th><td class="mono">{{ case.id }}</td></tr>
+  <tr><th>Title</th><td>{{ case.title }}</td></tr>
+  <tr><th>Revision</th><td>{{ case.current_revision }}</td></tr>
+  <tr><th>Packet status</th><td>{{ case.packet_status }}</td></tr>
+  <tr><th>Complaint reference (as supplied)</th><td>{{ case.complaint_reference or "none supplied" }}</td></tr>
+  <tr><th>Created</th><td>{{ case.created_at }}</td></tr>
+  <tr><th>Latest recorded official status</th><td>{% if latest_status.event %}<strong>{{ latest_status.event.category.replace("_", " ") }}</strong> — “{{ latest_status.event.raw_status }}” (effective {{ latest_status.event.effective_at.date if latest_status.event.effective_at and latest_status.event.effective_at.date else "unknown" }}){% else %}No official update recorded.{% endif %} <span class="muted">{{ latest_status.qualification }}</span></td></tr>
+</table>
+
+<h2>Citizen account</h2>
+{% set accounts = sources | selectattr("kind", "in", ["typed_account", "user_answer"]) | list %}
+{% if accounts %}
+  {% for s in accounts %}
+    <p class="muted">Evidence {{ short(s.id) }} · {{ s.kind.replace("_", " ") }} · received {{ s.received_at }}</p>
+    <blockquote>{{ s.text_content }}</blockquote>
+  {% endfor %}
+{% else %}<p class="muted">No typed account supplied.</p>{% endif %}
+
+<h2>Reviewed accounting</h2>
+<table>
+  <tr><th style="width:38%">Citizen-reported incident amount</th><td>{{ money(totals.citizen_reported_minor) }} <span class="muted">(as stated by the citizen; shown separately from reviewed totals)</span></td></tr>
+  <tr><th>Reviewed distinct successful debits</th><td><strong>{{ money(totals.reviewed_debit_minor) }}</strong> across {{ totals.reviewed_debit_ids | length }} payment(s)</td></tr>
+  <tr><th>Pending (reviewed)</th><td>{{ money(totals.pending_minor) }} across {{ totals.pending_ids | length }} payment(s)</td></tr>
+  <tr><th>Awaiting review</th><td>{{ totals.unreviewed_ids | length }} unreviewed · {{ totals.unresolved_ids | length }} unresolved · {{ totals.duplicate_candidate_ids | length }} duplicate candidate(s) · {{ totals.conflict_ids | length }} conflict(s)</td></tr>
+  <tr><th>Excluded from reviewed totals</th><td>{% for e in totals.excluded %}{{ label_of(e.paymentId) or short(e.paymentId) }}: {{ e.reason }}<br>{% else %}none{% endfor %}</td></tr>
+</table>
+<p class="muted">A zero reviewed subtotal can mean "nothing reviewed yet"; it never means "no money lost". Citizen-reported and reviewed figures describe different information and are never reconciled by rewriting either.</p>
+
+<h2>Transactions</h2>
+<table>
+  <tr><th>#</th><th>Amount</th><th>Currency</th><th>Reference</th><th>Type</th><th>Status</th><th>Direction</th><th>Date</th><th>Counterparty</th><th>Category</th><th>Review</th><th>Evidence</th></tr>
+  {% for p in payments %}
+  <tr>
+    <td>{{ p.label }}{% if p.merged_into_payment_id %}<br><span class="muted">merged into {{ label_of(p.merged_into_payment_id) }}</span>{% endif %}</td>
+    <td>{{ fact_text(p.fields.get("amount")) }}</td>
+    <td>{{ fact_text(p.fields.get("currency")) }}</td>
+    <td class="mono">{{ fact_text(p.fields.get("reference")) }}</td>
+    <td>{{ fact_text(p.fields.get("reference_type")) }}</td>
+    <td>{{ fact_text(p.fields.get("status")) }}</td>
+    <td>{{ fact_text(p.fields.get("direction")) }}</td>
+    <td>{{ fact_text(p.fields.get("occurred_at")) }}</td>
+    <td>{{ fact_text(p.fields.get("counterparty")) }}</td>
+    <td>{{ p.category.replace("_", " ") }}{% if p.category_reason %}<br><span class="muted">{{ p.category_reason }}</span>{% endif %}</td>
+    <td class="muted">{{ review_summary(p) }}</td>
+    <td class="mono">{% for sid in p.source_ids %}{{ short(sid) }} {% endfor %}</td>
+  </tr>
+  {% else %}<tr><td colspan="12" class="muted">No transactions proposed yet.</td></tr>{% endfor %}
+</table>
+
+<h2>Refunds and recovery</h2>
+<table>
+  <tr><th style="width:38%">Recovery summary</th><td><strong>{{ recovery.state.replace("_", " ") }}</strong>{% if recovery.reasons %} <span class="muted">({{ recovery.reasons | join("; ") }})</span>{% endif %}</td></tr>
+  <tr><th>Reviewed debit baseline</th><td>{{ money(recovery.reviewed_debit_minor) }}</td></tr>
+  <tr><th>Reviewed matched refunds</th><td>{{ money(recovery.matched_refund_minor) }}</td></tr>
+  <tr><th>Outstanding against reviewed payments</th><td><strong>{{ money(recovery.outstanding_minor) }}</strong> <span class="muted">(not a legal loss calculation)</span></td></tr>
+  <tr><th>Reported refunds awaiting a reviewed record</th><td>{{ money(recovery.claimed_refund_minor) }}</td></tr>
+  <tr><th>Reviewed refunds not yet allocated</th><td>{{ money(recovery.unallocated_eligible_minor) }}</td></tr>
+  <tr><th>Citizen's statement on outstanding money</th><td>{% if recovery.citizen_outstanding_text %}{% if recovery.citizen_outstanding_minor == "0" %}Nothing outstanding{% elif recovery.citizen_outstanding_minor %}{{ money(recovery.citizen_outstanding_minor) }}{% else %}Unsure{% endif %} — “{{ recovery.citizen_outstanding_text }}”{% else %}not captured{% endif %}</td></tr>
+</table>
+{% if refunds %}
+<table style="margin-top:8px">
+  <tr><th>#</th><th>Amount</th><th>Reference</th><th>Date</th><th>Evidence</th><th>Relation</th><th>Category</th><th>Evidence IDs</th></tr>
+  {% for r in refunds %}<tr>
+    <td>{{ r.label }}{% if r.merged_into_refund_id %}<br><span class="muted">described by {{ label_of(r.merged_into_refund_id) }}</span>{% endif %}</td>
+    <td>{{ fact_text(r.fields.get("amount")) }}</td><td class="mono">{{ fact_text(r.fields.get("reference")) }}</td><td>{{ fact_text(r.fields.get("occurred_at")) }}</td>
+    <td>{{ "credit record" if r.evidence_kind == "document" else "reported by citizen" }}</td><td>{{ r.relates_to_incident }}</td>
+    <td>{{ r.category.replace("_", " ") }}{% if r.category_reason %}<br><span class="muted">{{ r.category_reason }}</span>{% endif %}</td>
+    <td class="mono">{% for sid in r.source_ids %}{{ short(sid) }} {% endfor %}</td>
+  </tr>{% endfor %}
+</table>
+{% endif %}
+{% if allocations %}
+<table style="margin-top:8px">
+  <tr><th>Refund</th><th>Covers payment</th><th>Amount</th><th>State</th><th>Counted</th><th>Note</th></tr>
+  {% for a in allocations %}<tr><td>{{ label_of(a.refund_id) }}</td><td>{{ label_of(a.payment_id) }}</td><td>{{ money(a.amount_minor) }}</td><td>{{ a.state.replace("_", " ") }}</td><td>{{ "yes" if a.counted else "no" ~ (" (" ~ a.issue.replace("_", " ") ~ ")" if a.issue else "") }}</td><td class="muted">{{ a.reason or "" }}</td></tr>{% endfor %}
+</table>
+{% endif %}
+<p class="muted">A refund counts only when its record is reviewed, confirmed as related, and explicitly allocated to a reviewed debit. "Refund initiated" or "amount frozen" is not money received. Recovery never changes the official complaint status.</p>
+
+<h2>Official complaint status (independent track)</h2>
+{% if status_events %}
+<table>
+  <tr><th>Category</th><th>Wording as supplied</th><th>Issuer as supplied</th><th>Effective</th><th>Recorded</th><th>Review</th><th>Evidence IDs</th></tr>
+  {% for e in status_events %}<tr><td>{{ e.category.replace("_", " ") }}</td><td>“{{ e.raw_status }}”</td><td>{{ e.issuer_as_supplied or "—" }}</td><td>{{ e.effective_at.date if e.effective_at and e.effective_at.date else "unknown" }}</td><td>{{ e.received_at }}</td><td>{{ e.review_state.replace("_", " ") }}</td><td class="mono">{% for sid in e.source_ids %}{{ short(sid) }} {% endfor %}</td></tr>{% endfor %}
+</table>
+<p class="muted">{{ latest_status.message }} {{ latest_status.qualification }}</p>
+{% else %}<p>No official update recorded. <span class="muted">{{ latest_status.qualification }}</span></p>{% endif %}
+
+{% if resolutions %}
+<h2>Resolution summary</h2>
+{% set res = resolutions[0] %}
+<p class="muted">{{ res.kind.replace("_", " ") }} · prepared at revision {{ res.revision }} by {{ res.prepared_by_role.replace("_", " ") }} · {{ "eligible for review" if res.eligible else "not eligible" }}{% if res.stale %} · stale (the case changed after preparation){% endif %}{% if res.review_outcome %} · <strong>{{ res.review_outcome.replace("_", " ") }}</strong> by {{ res.reviewed_by_role.replace("_", " ") }} at {{ res.reviewed_at }}{% if res.review_note %} — {{ res.review_note }}{% endif %}{% endif %}</p>
+<blockquote>{{ res.summary_text }}</blockquote>
+{% endif %}
+
+{% if questions %}
+<h2>Open and answered questions</h2>
+<ul>{% for q in questions %}<li>{{ q.text }} <span class="muted">({{ q.state }})</span></li>{% endfor %}</ul>
+{% endif %}
+
+{% if candidates %}
+<h2>Duplicate candidates awaiting confirmation</h2>
+<ul>{% for c in candidates %}<li>{{ label_of(c.payment_ids[0]) }} and {{ label_of(c.payment_ids[1]) }} share a reference ({{ c.basis.replace("_", " ") }}){% if c.issues %}; issues: {{ c.issues | join(", ") }}{% endif %}</li>{% endfor %}</ul>
+{% endif %}
+
+<h2>Unresolved and unconfirmed items</h2>
+<ul>
+{% for p in payments %}{% for kind, f in p.fields.items() %}{% if f.issue or f.review_state in ["unresolved", "unreviewed"] %}
+  <li>{{ p.label }} · {{ kind.replace("_", " ") }}: {{ fact_text(f) }} — {{ f.review_state.replace("_", " ") }}{% if f.reason %} ({{ f.reason }}){% endif %}</li>
+{% endif %}{% endfor %}{% endfor %}
+{% for kind, f in case_facts.items() %}{% if f.issue or f.review_state in ["unresolved", "unreviewed"] %}
+  <li>Case · {{ kind.replace("_", " ") }}: {{ fact_text(f) }} — {{ f.review_state.replace("_", " ") }}</li>
+{% endif %}{% endfor %}
+</ul>
+
+<h2>Evidence index</h2>
+<table>
+  <tr><th>Evidence ID</th><th>File</th><th>Kind</th><th>Received</th><th>SHA-256</th><th>Preview / excerpt</th></tr>
+  {% for e in evidence %}
+  <tr>
+    <td class="mono">{{ e.shortId }}</td>
+    <td>{{ e.filename }}{% if e.duplicateOfSourceId %}<br><span class="muted">identical bytes to {{ short(e.duplicateOfSourceId) }}</span>{% endif %}</td>
+    <td>{{ e.kind.replace("_", " ") }}<br><span class="muted">{{ e.provenanceKind.replace("_", " ") }}</span></td>
+    <td>{{ e.receivedAt }}</td>
+    <td class="mono">{{ e.sha256 }}</td>
+    <td>{% if e.thumbnailDataUri %}<img class="thumb" src="{{ e.thumbnailDataUri }}" alt="thumbnail of {{ e.filename }}">{% endif %}{% if e.textExcerpt %}<div class="muted" style="white-space:pre-wrap">{{ e.textExcerpt }}</div>{% endif %}</td>
+  </tr>
+  {% endfor %}
+</table>
+<p class="muted">A hash detects byte changes after ingestion. It does not prove authenticity or a legal chain of custody. Upload time is never treated as incident time.</p>
+
+<h2>Processing runs</h2>
+<table>
+  <tr><th>Run</th><th>Mode</th><th>Model</th><th>Prompt / schema</th><th>Status</th><th>Sources</th><th>Usage</th></tr>
+  {% for r in runs %}<tr><td class="mono">{{ short(r.id) }}</td><td><strong>{{ r.ai_mode }}</strong>{% if r.ai_mode == "fixture" %} <span class="muted">(replayed labelled fixture; not a live model call)</span>{% endif %}</td><td>{{ r.model_id }}</td><td>{{ r.prompt_version }} / v{{ r.schema_version }}</td><td>{{ r.status }}{% if r.error_type %} ({{ r.error_type }}){% endif %}</td><td>{{ r.input_source_ids | length }}</td><td class="mono">{{ r.usage }}</td></tr>{% endfor %}
+</table>
+
+<h2>Revision history</h2>
+<ol>{% for rv in revisions %}<li>r{{ rv.revision }} · {{ rv.kind.replace("_", " ") }} · {{ rv.actor_role }} · {{ rv.created_at }} — {{ rv.summary }}</li>{% endfor %}</ol>
+
+<h2>Review and correction history</h2>
+<table>
+  <tr><th>Revision</th><th>Role</th><th>Action</th><th>Target</th><th>Detail</th><th>When</th></tr>
+  {% for ev in events %}<tr><td>r{{ ev.revision }}</td><td>{{ ev.actor_role.replace("_", " ") }}</td><td>{{ ev.action }}</td><td>{{ ev.target_type }} {{ short(ev.target_id) }}</td><td class="mono">{{ ev.payload }}</td><td>{{ ev.created_at }}</td></tr>{% else %}<tr><td colspan="6" class="muted">No review actions yet.</td></tr>{% endfor %}
+</table>
+<p class="muted">Roles are simulated demo labels, not institutional accounts. This export is a snapshot of revision {{ case.current_revision }} and is not updated when the case changes.</p>
+</body>
+</html>

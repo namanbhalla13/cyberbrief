@@ -1,0 +1,45 @@
+{
+  "scriptId": "chat-hindi",
+  "label": "Fictional. A Hindi conversation about how CyberBrief works.",
+  "requiresCase": false,
+  "turns": [
+    {
+      "citizen": "CyberBrief क्या करता है?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "ask_help",
+        "language": "hi",
+        "reply": "यह देखिए।",
+        "slotUpdates": [],
+        "helpIds": [
+          "what-assistant-does",
+          "fictional-only"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "शिकायत भेजने के बाद क्या होगा?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "ask_help",
+        "language": "hi",
+        "reply": "यह देखिए कि आगे क्या होता है।",
+        "slotUpdates": [],
+        "helpIds": [
+          "submit-means",
+          "after-submit"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    }
+  ]
+}

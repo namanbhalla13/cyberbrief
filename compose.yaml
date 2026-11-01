@@ -1,0 +1,41 @@
+services:
+  cyberbrief:
+    build:
+      context: .
+      args:
+        WITH_FFMPEG: "false"   # set "true" to accept non-WAV audio uploads (the browser already sends WAV)
+        BUILD_ID: ${BUILD_ID:-dev}   # BUILD_ID=$(python scripts/build_id.py) docker compose up -d --build; shown by /api/health
+    ports:
+      - "${HOST_PORT:-8000}:8000"   # HOST_PORT=8080 docker compose up, when 8000 is taken
+    env_file:
+      - path: .env
+        required: false       # MODEL_API_KEY lives here for live mode; never baked into the image
+    environment:
+      APP_ENV: production
+      AI_MODE: ${AI_MODE:-fixture}
+      PUBLIC_FIXTURES_ONLY: ${PUBLIC_FIXTURES_ONLY:-false}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}   # set true behind HTTPS
+      DEMO_RETENTION_HOURS: ${DEMO_RETENTION_HOURS:-24}
+    volumes:
+      - cyberbrief-data:/app/data
+    restart: unless-stopped
+    develop:
+      watch:
+        # Python is copied into the image, and the single uvicorn worker runs without --reload,
+        # so a change is synced in and the container restarted.
+        - action: sync+restart
+          path: ./backend/app
+          target: /app/backend/app
+        # curated fixtures are read from disk on demand; no restart needed
+        - action: sync
+          path: ./evals/fixtures
+          target: /app/evals/fixtures
+        # the frontend is compiled into the image at build time, so it can only be rebuilt.
+        # For frontend work prefer `npm run dev` on 5173 -- it reloads in milliseconds.
+        - action: rebuild
+          path: ./frontend/src
+        - action: rebuild
+          path: ./backend/pyproject.toml
+
+volumes:
+  cyberbrief-data: {}

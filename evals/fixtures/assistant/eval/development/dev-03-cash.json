@@ -1,0 +1,12 @@
+{
+  "evalId": "dev-03-cash",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "I paid a man 3,000 rupees in cash for a phone and he never came back.",
+      "expect": {
+        "suggestion": "not_online"
+      }
+    }
+  ]
+}

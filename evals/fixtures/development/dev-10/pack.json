@@ -1,0 +1,149 @@
+{
+  "packId": "dev-10",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Unrelated salary credit and a false refund claim",
+  "tags": [
+    "unrelated_credit",
+    "false_refund_claim"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "45f4c9c25a75ff6fb7392cddbf8bfbea86aeb8daa4d47d4fcd7a7a2385c37412",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "800000",
+          "currency": "INR",
+          "reference": "DEMO-C10-0100",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "296f79f4c999b66106bdd7231afb9a848ee356328c258074e9a7072e2ce16f5e",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "4500000",
+          "currency": "INR",
+          "reference": "SAL-OCT-2026",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "credit",
+          "date": "2026-09-30",
+          "includeInIncident": false,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "salary credit; unrelated to the incident"
+          ]
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "T01",
+      "file": "T01.txt",
+      "sha256": "aa48c36a526f6bb94600ea8cfca275d125029699013b6a0ff4d4b65ac2e12fb6",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "expectedObservations": [
+        {
+          "claimText": "I paid 8,000 to Trendy Threads. The seller says they refunded me 8,000 but nothing has arrived in my account.",
+          "refundClaimed": true
+        }
+      ],
+      "fixtureResponse": "fixture_responses/T01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "DEMO-C10-0100",
+        "amountMinor": "800000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [
+      {
+        "source": "S02",
+        "amountMinor": "4500000",
+        "reference": "SAL-OCT-2026",
+        "relatedToIncident": false
+      }
+    ],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "800000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "800000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

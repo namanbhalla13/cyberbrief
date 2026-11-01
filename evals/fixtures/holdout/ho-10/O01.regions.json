@@ -1,0 +1,45 @@
+{
+  "spec": {
+    "name": "O01",
+    "reference": "HO10-ACK-5501",
+    "date_text": "24 Oct 2026",
+    "status_text": "Your complaint has been forwarded to the concerned bank for necessary action.",
+    "issuer": "Demo Cyber Helpdesk (fictional)",
+    "addressee": "Dear complainant,",
+    "seed": 1
+  },
+  "imageSize": [
+    900,
+    700
+  ],
+  "regions": {
+    "issuer": {
+      "x": 40,
+      "y": 38,
+      "width": 460,
+      "height": 30,
+      "text": "Demo Cyber Helpdesk (fictional)"
+    },
+    "reference": {
+      "x": 40,
+      "y": 167,
+      "width": 373,
+      "height": 22,
+      "text": "Complaint reference: HO10-ACK-5501"
+    },
+    "date": {
+      "x": 40,
+      "y": 204,
+      "width": 174,
+      "height": 16,
+      "text": "Date: 24 Oct 2026"
+    },
+    "status": {
+      "x": 40,
+      "y": 296,
+      "width": 603.984375,
+      "height": 68,
+      "text": "Your complaint has been forwarded to the concerned bank for necessary action."
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "scriptId": "chat-status",
+  "label": "Fictional. For a chat opened from an existing complaint.",
+  "requiresCase": true,
+  "turns": [
+    {
+      "citizen": "Where does my complaint stand?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "ask_status",
+        "language": "en",
+        "reply": "Here is where your complaint stands.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "Paisa pakka wapas milega na?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "hinglish",
+        "reply": "Main samajh sakta hoon ki aap yeh jaanna chahte hain.",
+        "slotUpdates": [],
+        "helpIds": [
+          "cannot-predict"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "Can you call the police for me?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "I can't contact anyone for you. I can help you prepare and track your CyberBrief complaint.",
+        "slotUpdates": [],
+        "helpIds": [
+          "assistant-not-human"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    }
+  ]
+}

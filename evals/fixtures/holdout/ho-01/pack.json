@@ -1,0 +1,184 @@
+{
+  "packId": "ho-01",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Three payments across three layouts",
+  "tags": [
+    "mixed_layouts"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "497ac4d666d99d2cd04e9fa578e7fbf5b13d5857167169bc7005ec5de7c5e3e0",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "150000",
+          "currency": "INR",
+          "reference": "HO1-A-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "918e0b912b998ae8b78a116031e13e5d4101e0bb4afd3b57ac6eba704a58dd9f",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        420
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "250000",
+          "currency": "INR",
+          "reference": "HO1-B-0002",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-15",
+          "includeInIncident": true,
+          "layout": "variant_b",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": false,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "S03",
+      "file": "S03.png",
+      "sha256": "75fb5cf59266ce52663a81b772c700637a45992d48276e7e95df247068bad8cd",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S03.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "350000",
+          "currency": "INR",
+          "reference": "HO1-C-0003",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-16",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S03.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO1-A-0001",
+        "amountMinor": "150000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "reference": "HO1-B-0002",
+        "amountMinor": "250000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S02"
+        ]
+      },
+      {
+        "reference": "HO1-C-0003",
+        "amountMinor": "350000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S03"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "750000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "750000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

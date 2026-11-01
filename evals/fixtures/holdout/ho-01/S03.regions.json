@@ -1,0 +1,91 @@
+{
+  "spec": {
+    "name": "S03",
+    "amount_text": "\u20b93,500.00",
+    "reference": "HO1-C-0003",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "16 Oct 2026, 11:00 AM",
+    "payee_name": "Trendy Threads Store",
+    "payee_vpa": "trendythreads.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_c",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    720,
+    1280
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 41,
+      "width": 138,
+      "height": 27,
+      "text": "QuickUPI"
+    },
+    "direction": {
+      "x": 72,
+      "y": 350,
+      "width": 100,
+      "height": 25,
+      "text": "You paid"
+    },
+    "amount": {
+      "x": 72,
+      "y": 408,
+      "width": 293,
+      "height": 54,
+      "text": "\u20b93,500.00"
+    },
+    "payee": {
+      "x": 72,
+      "y": 478,
+      "width": 257,
+      "height": 24,
+      "text": "to Trendy Threads Store"
+    },
+    "payee_vpa": {
+      "x": 72,
+      "y": 512,
+      "width": 264,
+      "height": 18,
+      "text": "trendythreads.demo@demobank"
+    },
+    "reference": {
+      "x": 72,
+      "y": 603,
+      "width": 141,
+      "height": 17,
+      "text": "HO1-C-0003"
+    },
+    "date": {
+      "x": 72,
+      "y": 658,
+      "width": 200,
+      "height": 17,
+      "text": "16 Oct 2026, 11:00 AM"
+    },
+    "status": {
+      "x": 92,
+      "y": 725,
+      "width": 102,
+      "height": 20,
+      "text": "Completed"
+    },
+    "payer_vpa": {
+      "x": 72,
+      "y": 866,
+      "width": 250,
+      "height": 16,
+      "text": "From citizen.demo@demobank"
+    }
+  }
+}

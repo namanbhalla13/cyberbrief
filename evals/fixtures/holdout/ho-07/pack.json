@@ -1,0 +1,92 @@
+{
+  "packId": "ho-07",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Truncated reference with Devanagari digits",
+  "tags": [
+    "truncated_reference",
+    "devanagari"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "4fbfd59e332b664b27c5c2c721454a4352cbdcc6f77ab2ea75960c322636942d",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        220,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "1850000",
+          "currency": "INR",
+          "reference": "HO7-TRUNC-998877",
+          "referenceTruncatedInImage": true,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "devanagari",
+          "crop": "ref_truncated",
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": false,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "partial identifier stays unresolved; never auto-merged"
+          ]
+        }
+      ],
+      "declaredImperfections": {
+        "referenceRaw": "HO7-TRU",
+        "issues": [
+          "reference_truncated"
+        ]
+      },
+      "fixtureResponse": "fixture_responses/S01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO7-TRUNC-998877",
+        "amountMinor": "1850000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "1850000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "1850000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

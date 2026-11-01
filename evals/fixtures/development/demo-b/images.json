@@ -1,0 +1,57 @@
+[
+  {
+    "source": "S01",
+    "file": "S01.png",
+    "sha256": "a84c87d92f64f30b2067c65fb5847d0640aeeced5ad6c2e4b207e5ce1dc1e68a",
+    "bytes": 51880,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "S02",
+    "file": "S02.png",
+    "sha256": "bfcbaa341e83dfccd465cfe9910ea441e0b3f11241f4859e51f34a36195d10c6",
+    "bytes": 52118,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "R1",
+    "file": "R1.png",
+    "sha256": "112f06616028ef659d1c4481fddfaf92f6ea13ad00b19edb628e170df78d3936",
+    "bytes": 51794,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "R2",
+    "file": "R2.png",
+    "sha256": "3153c3e2798fa1c8d23be4893811b7b0fd29d9bdd5841e0c9baf8f1fa3872b8b",
+    "bytes": 52304,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "O1",
+    "file": "O1.png",
+    "sha256": "c07e12bfdce700bef87d50288e66ac734ad7ddb2416cdb712f73f7eb0557ff02",
+    "bytes": 44938,
+    "mediaType": "image/png",
+    "imageSize": [
+      900,
+      700
+    ]
+  }
+]

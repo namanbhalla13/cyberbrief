@@ -1,0 +1,46 @@
+[
+  {
+    "source": "S01",
+    "file": "S01.png",
+    "sha256": "6ea6a0ddad3553b2b6fb45774073d45929999c11b95a0f98cd69bc33d714ec2e",
+    "bytes": 51444,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "S02",
+    "file": "S02.jpg",
+    "sha256": "4a2ac141714f0cf83b700cd78624304292ae300c0032e3c001b5d64d03fa8dfc",
+    "bytes": 11383,
+    "mediaType": "image/jpeg",
+    "imageSize": [
+      612,
+      251
+    ]
+  },
+  {
+    "source": "S03",
+    "file": "S03.png",
+    "sha256": "77ddc7bf7b565771e049bde96ca8aa1f73996c7aab8bbcadc9dfdb7b9fe98432",
+    "bytes": 51752,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  },
+  {
+    "source": "S04",
+    "file": "S04.png",
+    "sha256": "5bbbdaee3e9ca166a6cccc60b26335f24c19470c4bd5a33fc919619a51331c37",
+    "bytes": 51816,
+    "mediaType": "image/png",
+    "imageSize": [
+      720,
+      1280
+    ]
+  }
+]

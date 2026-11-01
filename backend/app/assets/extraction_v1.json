@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "sourceType", "language", "visibleText", "observations", "unresolvedFields"],
+  "properties": {
+    "schemaVersion": { "type": "string", "enum": ["1"] },
+    "sourceType": {
+      "type": "string",
+      "enum": ["receipt", "chat_screenshot", "bank_statement", "official_communication", "typed_account", "other", "unreadable"]
+    },
+    "language": { "type": "string" },
+    "visibleText": { "type": "string" },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "kind", "amountRaw", "currency", "referenceRaw", "referenceType", "statusRaw",
+          "directionRaw", "dateRaw", "counterpartyRaw", "accountScopeRaw", "supportingQuote", "issues"
+        ],
+        "properties": {
+          "kind": { "type": "string", "enum": ["payment", "refund_credit", "status_message", "claim", "other"] },
+          "amountRaw": { "type": ["string", "null"] },
+          "currency": { "type": ["string", "null"] },
+          "referenceRaw": { "type": ["string", "null"] },
+          "referenceType": { "type": ["string", "null"] },
+          "statusRaw": { "type": ["string", "null"] },
+          "directionRaw": { "type": ["string", "null"] },
+          "dateRaw": { "type": ["string", "null"] },
+          "counterpartyRaw": { "type": ["string", "null"] },
+          "accountScopeRaw": { "type": ["string", "null"] },
+          "supportingQuote": { "type": "string" },
+          "issues": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "unresolvedFields": { "type": "array", "items": { "type": "string" } }
+  }
+}

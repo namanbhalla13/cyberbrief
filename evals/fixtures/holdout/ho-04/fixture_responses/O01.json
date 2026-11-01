@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "official_communication",
+    "language": "en",
+    "visibleText": "Demo Cyber Helpdesk (fictional) Complaint acknowledgement Complaint reference: HO4-ACK-2201 Date: 23 Oct 2026 Your complaint has been registered and acknowledged. Please provide the bank statement for the period in question.",
+    "observations": [
+      {
+        "kind": "status_message",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": "HO4-ACK-2201",
+        "referenceType": "complaint reference",
+        "statusRaw": "Your complaint has been registered and acknowledged. Please provide the bank statement for the period in question.",
+        "directionRaw": null,
+        "dateRaw": "23 Oct 2026",
+        "counterpartyRaw": "Demo Cyber Helpdesk (fictional)",
+        "accountScopeRaw": null,
+        "supportingQuote": "Your complaint has been registered and acknowledged. Please provide the bank sta",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

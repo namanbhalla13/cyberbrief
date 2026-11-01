@@ -1,0 +1,12 @@
+{
+  "evalId": "dev-07-off-topic",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Can you help me with my maths homework?",
+      "expect": {
+        "offTopic": true
+      }
+    }
+  ]
+}

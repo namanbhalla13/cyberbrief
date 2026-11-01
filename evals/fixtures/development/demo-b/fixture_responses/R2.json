@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Demo build Payment Received Received from Gadget Galaxy Deals gadgetgalaxy.demo@demobank ₹15,000.00 24 Oct 2026, 04:45 PM UPI Ref No REF-B-RF2 To citizen.demo@demobank Status Received",
+    "observations": [
+      {
+        "kind": "refund_credit",
+        "amountRaw": "₹15,000.00",
+        "currency": "INR",
+        "referenceRaw": "REF-B-RF2",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Received",
+        "directionRaw": "Received from",
+        "dateRaw": "24 Oct 2026, 04:45 PM",
+        "counterpartyRaw": "Gadget Galaxy Deals (gadgetgalaxy.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹15,000.00 · UPI Ref No REF-B-RF2",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

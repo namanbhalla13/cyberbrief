@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Received Received from HomeMart Essentials homemart.demo@demobank ₹4,000.00 22 Oct 2026, 12:00 PM HO3-RF-0001 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "refund_credit",
+        "amountRaw": "₹4,000.00",
+        "currency": "INR",
+        "referenceRaw": "HO3-RF-0001",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Received",
+        "directionRaw": "Received from",
+        "dateRaw": "22 Oct 2026, 12:00 PM",
+        "counterpartyRaw": "HomeMart Essentials (homemart.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹4,000.00 · HO3-RF-0001",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

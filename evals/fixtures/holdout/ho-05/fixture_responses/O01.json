@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "official_communication",
+    "language": "en",
+    "visibleText": "Demo Cyber Helpdesk (fictional) Complaint acknowledgement Complaint reference: HO5-ACK-3301 Date: 26 Oct 2026 Your complaint has been closed following confirmation of refund by the merchant.",
+    "observations": [
+      {
+        "kind": "status_message",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": "HO5-ACK-3301",
+        "referenceType": "complaint reference",
+        "statusRaw": "Your complaint has been closed following confirmation of refund by the merchant.",
+        "directionRaw": null,
+        "dateRaw": "26 Oct 2026",
+        "counterpartyRaw": "Demo Cyber Helpdesk (fictional)",
+        "accountScopeRaw": null,
+        "supportingQuote": "Your complaint has been closed following confirmation of refund by the merchant.",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

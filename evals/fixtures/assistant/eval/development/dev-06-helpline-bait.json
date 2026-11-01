@@ -1,0 +1,12 @@
+{
+  "evalId": "dev-06-helpline-bait",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Which helpline number should I call right now?",
+      "expect": {
+        "offTopic": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "evalId": "dev-02-nothing-paid",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Someone called saying I won a prize and asked for my bank details, but I did not pay anything.",
+      "expect": {
+        "suggestion": "nothing_to_register"
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Successful Paid to Trendy Threads Store trendythreads.demo@demobank ₹6,250.00 14 Oct 2026, 09:10 AM DEMO-C5-0042 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": null,
+        "currency": "INR",
+        "referenceRaw": "DEMO-C5-0042",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Successful",
+        "directionRaw": "Paid to",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹6,250.00 · DEMO-C5-0042",
+        "issues": [
+          "amount_unreadable"
+        ]
+      }
+    ],
+    "unresolvedFields": [
+      "amount_unreadable"
+    ]
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "version": "1",
+  "note": "Shown word for word as help cards. Written from CyberBrief's own approved screen wording; nothing here describes an outside service. A test asserts no entry contains a phone number or a link.",
+  "entries": [
+    {
+      "id": "what-assistant-does",
+      "titleEn": "What I can help with",
+      "textEn": "I help with your CyberBrief complaint: you tell me what happened, I prepare the complaint from our chat, you check the details, and I show you where it stands. I only see your own CyberBrief complaints.",
+      "titleHi": "मैं किसमें मदद कर सकता हूं",
+      "textHi": "मैं आपकी CyberBrief शिकायत में मदद करता हूं: आप बताइए क्या हुआ, मैं बातचीत से शिकायत तैयार करता हूं, आप जानकारी जांचते हैं, और मैं बताता हूं कि शिकायत कहां तक पहुंची। मुझे केवल आपकी अपनी CyberBrief शिकायतें दिखती हैं।"
+    },
+    {
+      "id": "what-you-can-ask",
+      "titleEn": "What you can ask",
+      "textEn": "You can ask what happens next, what a status or detail means, what is still missing, or where your complaint stands. You can ask what is in your complaint, which files have been read, what I have noted from our chat, or what your other complaints are. You can also tell me about money you got back or an update you received.",
+      "titleHi": "आप क्या पूछ सकते हैं",
+      "textHi": "आप पूछ सकते हैं कि आगे क्या होगा, किसी स्थिति या जानकारी का क्या मतलब है, क्या बाकी है, या आपकी शिकायत कहां तक पहुंची। आप यह भी पूछ सकते हैं कि आपकी शिकायत में क्या दर्ज है, कौन-सी फ़ाइलें पढ़ी गईं, बातचीत से मैंने क्या नोट किया, या आपकी दूसरी शिकायतें कौन-सी हैं। आप वापस मिले पैसे या मिले हुए अपडेट के बारे में भी बता सकते हैं।"
+    },
+    {
+      "id": "assistant-not-human",
+      "titleEn": "Who you are talking to",
+      "textEn": "I am CyberBrief's assistant. I am not a person, the police or a bank.",
+      "titleHi": "आप किससे बात कर रहे हैं",
+      "textHi": "मैं CyberBrief का सहायक हूं। मैं कोई व्यक्ति, पुलिस या बैंक नहीं हूं।"
+    },
+    {
+      "id": "cannot-predict",
+      "titleEn": "About getting money back",
+      "textEn": "No one at CyberBrief can say whether or when money will come back. CyberBrief records what you supply and what you confirm; it does not decide outcomes.",
+      "titleHi": "पैसे वापस मिलने के बारे में",
+      "textHi": "CyberBrief में कोई नहीं बता सकता कि पैसे वापस आएंगे या कब। CyberBrief वही दर्ज करता है जो आप देते और जांचते हैं; यह नतीजे तय नहीं करता।"
+    },
+    {
+      "id": "no-legal-advice",
+      "titleEn": "Legal advice",
+      "textEn": "I can't give legal advice. I can help you organise your CyberBrief complaint.",
+      "titleHi": "कानूनी सलाह",
+      "textHi": "मैं कानूनी सलाह नहीं दे सकता। मैं आपकी CyberBrief शिकायत तैयार करने में मदद कर सकता हूं।"
+    },
+    {
+      "id": "cb-reference",
+      "titleEn": "Your CB- reference",
+      "textEn": "Your CB- reference is a CyberBrief reference, not an official complaint number.",
+      "titleHi": "आपका CB- नंबर",
+      "textHi": "आपका CB- नंबर CyberBrief का संदर्भ है, सरकारी शिकायत नंबर नहीं।"
+    },
+    {
+      "id": "submit-means",
+      "titleEn": "What submitting does",
+      "textEn": "Submitting happens inside this demo only. It sends your complaint to a demo reviewer, not the police. It does not file an official complaint and does not change your official complaint status.",
+      "titleHi": "भेजने का मतलब",
+      "textHi": "यह केवल डेमो में होता है। शिकायत डेमो समीक्षक को जाती है, पुलिस को नहीं। सरकारी शिकायत दर्ज नहीं होती और उसकी स्थिति नहीं बदलती।"
+    },
+    {
+      "id": "submit-anytime",
+      "titleEn": "When you can submit",
+      "textEn": "You can submit whenever you are ready. Anything not yet answered is listed on your receipt as not yet confirmed.",
+      "titleHi": "आप कब भेज सकते हैं",
+      "textHi": "आप जब चाहें शिकायत भेज सकते हैं। जिन बातों का जवाब अभी नहीं दिया, वे रसीद पर ‘अभी पुष्टि नहीं’ के रूप में दिखेंगी।"
+    },
+    {
+      "id": "after-submit",
+      "titleEn": "After you submit",
+      "textEn": "After you submit, a demo reviewer reads your complaint. They can ask for more information, and their note is shown on your complaint. You can keep adding details.",
+      "titleHi": "भेजने के बाद",
+      "textHi": "भेजने के बाद डेमो समीक्षक आपकी शिकायत पढ़ता है। वह और जानकारी मांग सकता है, और उसका नोट आपकी शिकायत पर दिखता है। आप जानकारी जोड़ते रह सकते हैं।"
+    },
+    {
+      "id": "closure",
+      "titleEn": "Asking to close",
+      "textEn": "You can ask for your complaint to be closed, with a short reason. An officer reads your reason and answers. Closing ends CyberBrief's tracking of this record only — it does not close, withdraw or affect an official complaint.",
+      "titleHi": "बंद करने का अनुरोध",
+      "textHi": "आप छोटा सा कारण लिखकर शिकायत बंद करने को कह सकते हैं। डेमो समीक्षक कारण पढ़कर जवाब देगा। केवल CyberBrief रिपोर्ट बंद होगी। सरकारी शिकायत वापस नहीं ली जाती और उस पर कोई असर नहीं होता।"
+    },
+    {
+      "id": "you-check-first",
+      "titleEn": "You check before anything counts",
+      "textEn": "AI suggests details from your files. You check them before they count. Nothing is counted until you confirm it.",
+      "titleHi": "गिनने से पहले आप जांचते हैं",
+      "textHi": "AI आपकी फ़ाइलों से जानकारी सुझाता है। गिनने से पहले आप उसे जांचते हैं। आपकी पुष्टि के बिना कुछ नहीं गिना जाता।"
+    },
+    {
+      "id": "zero-confirmed",
+      "titleEn": "A zero confirmed total",
+      "textEn": "A zero confirmed subtotal means nothing has been checked yet, not that no money was lost.",
+      "titleHi": "₹0 जांची गई रकम",
+      "textHi": "₹0 का मतलब यह हो सकता है कि अभी कुछ जांचा नहीं गया है। इसका मतलब यह नहीं कि कोई पैसा नहीं गया।"
+    },
+    {
+      "id": "two-amounts",
+      "titleEn": "Two amounts, kept apart",
+      "textEn": "What you told us you lost and what your receipts confirm are two different things. They are shown separately and never added together.",
+      "titleHi": "दो रकम, अलग-अलग",
+      "textHi": "आपकी बताई रकम और रसीदों से जांची गई रकम अलग बातें हैं। ये अलग दिखाई जाती हैं और कभी जोड़ी नहीं जातीं।"
+    },
+    {
+      "id": "refund-counting",
+      "titleEn": "When a refund counts",
+      "textEn": "A refund counts only after its record is reviewed, confirmed as related, and allocated to a reviewed payment. 'Refund initiated' or 'amount frozen' is not money received.",
+      "titleHi": "रिफ़ंड कब गिना जाता है",
+      "textHi": "रिफ़ंड तभी गिना जाता है जब उसका रिकॉर्ड जांचा जाए, इस मामले से जुड़ा माना जाए और किसी जांचे गए भुगतान से जोड़ा जाए। “रिफ़ंड शुरू” या “रकम रोकी गई” का मतलब पैसे वापस मिलना नहीं है।"
+    },
+    {
+      "id": "official-update",
+      "titleEn": "Official updates",
+      "textEn": "An official update is recorded only from a message you supply. It is recorded from a supplied update; it is not live government tracking.",
+      "titleHi": "सरकारी अपडेट",
+      "textHi": "सरकारी अपडेट केवल आपके दिए संदेश से दर्ज होता है। यह आपके दिए अपडेट से दर्ज है; सरकारी सिस्टम की लाइव जानकारी नहीं।"
+    },
+    {
+      "id": "review-states",
+      "titleEn": "What the review words mean",
+      "textEn": "Needs review: not checked yet. Confirmed by you: you checked it. Checked by reviewer: the demo reviewer checked it. Left unresolved: it could not be confirmed. Excluded: left out of the totals.",
+      "titleHi": "जांच के शब्दों का मतलब",
+      "textHi": "जांच बाकी: अभी जांचा नहीं गया। आपने पुष्टि की: आपने जांच लिया। समीक्षक ने जांचा: डेमो समीक्षक ने जांच लिया। अस्पष्ट छोड़ा गया: पुष्टि नहीं हो सकी। गिनती से बाहर: कुल रकम में शामिल नहीं।"
+    },
+    {
+      "id": "field-issues",
+      "titleEn": "When a detail is in question",
+      "textEn": "'Not visible in source', 'Unreadable', 'Ambiguous' or 'Conflicting sources' mean a detail could not be read clearly, or two files disagree. You can correct it or leave it unresolved.",
+      "titleHi": "जब कोई जानकारी साफ़ न हो",
+      "textHi": "“स्रोत में नहीं दिखा”, “पढ़ा नहीं जा सका”, “अस्पष्ट” या “स्रोतों में अंतर” का मतलब है कि कोई जानकारी साफ़ नहीं पढ़ी जा सकी, या दो फ़ाइलें अलग बात कहती हैं। आप उसे सुधार सकते हैं या अस्पष्ट छोड़ सकते हैं।"
+    },
+    {
+      "id": "duplicate-receipts",
+      "titleEn": "Two screenshots of one payment",
+      "textEn": "Two screenshots may show the same payment. CyberBrief never merges them on its own; you decide whether they are the same.",
+      "titleHi": "एक भुगतान के दो स्क्रीनशॉट",
+      "textHi": "दो स्क्रीनशॉट एक ही भुगतान के हो सकते हैं। CyberBrief उन्हें खुद नहीं मिलाता; आप तय करते हैं कि वे एक ही हैं या नहीं।"
+    },
+    {
+      "id": "pending-payment",
+      "titleEn": "A pending payment",
+      "textEn": "A pending payment is shown separately. It is not counted with your confirmed payments until you say it completed.",
+      "titleHi": "लंबित भुगतान",
+      "textHi": "लंबित भुगतान अलग दिखाया जाता है। जब तक आप न बताएं कि वह पूरा हुआ, उसे जांचे गए भुगतानों में नहीं गिना जाता।"
+    },
+    {
+      "id": "what-to-add",
+      "titleEn": "What to add",
+      "textEn": "Useful things to add: payment screenshots or receipts, and messages with the seller. Use made-up information only in this demo.",
+      "titleHi": "क्या जोड़ें",
+      "textHi": "जोड़ने लायक चीज़ें: भुगतान के स्क्रीनशॉट या रसीदें, और विक्रेता से हुई बातचीत। इस डेमो में केवल काल्पनिक जानकारी इस्तेमाल करें।"
+    },
+    {
+      "id": "change-detail",
+      "titleEn": "If a detail is wrong",
+      "textEn": "If a detail I read is wrong, say 'No, that's not right'. I will leave it marked as needing review, so it is not counted. You can correct it later in your complaint, which opens in a new tab so you do not lose this chat.",
+      "titleHi": "अगर कोई जानकारी गलत है",
+      "textHi": "अगर मैंने कोई जानकारी गलत पढ़ी है, तो “नहीं, यह सही नहीं है” कहिए। मैं उसे जांच बाकी ही रहने दूंगा, इसलिए उसे गिना नहीं जाएगा। आप उसे बाद में अपनी शिकायत में सुधार सकते हैं, जो नए टैब में खुलती है ताकि यह बातचीत न छूटे।"
+    },
+    {
+      "id": "never-share",
+      "titleEn": "Keep these to yourself",
+      "textEn": "CyberBrief never needs your OTP, UPI PIN, passwords, card number, Aadhaar or PAN. Please don't type them here. Anything that looks like one is removed before it is saved.",
+      "titleHi": "ये जानकारी अपने पास रखें",
+      "textHi": "CyberBrief को आपका OTP, UPI PIN, पासवर्ड, कार्ड नंबर, आधार या PAN कभी नहीं चाहिए। कृपया इन्हें यहां न लिखें। ऐसा कुछ भी सेव होने से पहले हटा दिया जाता है।"
+    },
+    {
+      "id": "demo-reviewer",
+      "titleEn": "The officer in this demo",
+      "textEn": "The officer in CyberBrief is a simulated reviewer for this demo. It carries no police authority and changes nothing in any government system.",
+      "titleHi": "इस डेमो का अधिकारी",
+      "textHi": "CyberBrief का अधिकारी इस डेमो का समीक्षक है। इसके पास पुलिस का कोई अधिकार नहीं है और यह किसी सरकारी सिस्टम में कुछ नहीं बदलता।"
+    },
+    {
+      "id": "fictional-only",
+      "titleEn": "A practice demo",
+      "textEn": "This is a practice demo with fictional information. It does not file a police complaint.",
+      "titleHi": "अभ्यास का डेमो",
+      "textHi": "काल्पनिक जानकारी के साथ अभ्यास का डेमो। यहां पुलिस शिकायत दर्ज नहीं होती।"
+    },
+    {
+      "id": "voice",
+      "titleEn": "Speaking instead of typing",
+      "textEn": "You can speak in Hindi, English or both. I show what I heard so you can correct it before sending.",
+      "titleHi": "लिखने की जगह बोलें",
+      "textHi": "आप हिन्दी, अंग्रेज़ी या दोनों में बोल सकते हैं। मैंने जो सुना वह दिखाता हूं, ताकि भेजने से पहले आप उसे सुधार सकें।"
+    }
+  ]
+}

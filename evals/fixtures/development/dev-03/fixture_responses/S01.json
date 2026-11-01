@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "PayLedger Account statement UPI/DR HomeMart Essentials homemart.demo@demobank ₹2,499.00 14 Oct 2026, 09:10 AM DEMO-C3-7781 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹2,499.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-C3-7781",
+        "referenceType": "UPI reference in description",
+        "statusRaw": null,
+        "directionRaw": "UPI/DR",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "HomeMart Essentials (homemart.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹2,499.00 · DEMO-C3-7781",
+        "issues": [
+          "status_not_visible"
+        ]
+      }
+    ],
+    "unresolvedFields": [
+      "status"
+    ]
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

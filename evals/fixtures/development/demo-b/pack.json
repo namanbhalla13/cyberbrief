@@ -1,0 +1,266 @@
+{
+  "packId": "demo-b",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Demo B — recovery lifecycle (partial then full refund, separate official status)",
+  "labelProvenance": {
+    "author": "owner (fixture designer)",
+    "method": "authored from generator specifications; synthetic images; not model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "scripts": [
+      "scripts/fixtures/gen_receipt.py",
+      "scripts/fixtures/gen_official_update.py"
+    ],
+    "layout": "variant_a",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "a84c87d92f64f30b2067c65fb5847d0640aeeced5ad6c2e4b207e5ce1dc1e68a",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "bfcbaa341e83dfccd465cfe9910ea441e0b3f11241f4859e51f34a36195d10c6",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "R1",
+      "file": "R1.png",
+      "sha256": "112f06616028ef659d1c4481fddfaf92f6ea13ad00b19edb628e170df78d3936",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "R1.regions.json",
+      "fixtureResponse": "fixture_responses/R1.json"
+    },
+    {
+      "fixtureSourceId": "R2",
+      "file": "R2.png",
+      "sha256": "3153c3e2798fa1c8d23be4893811b7b0fd29d9bdd5841e0c9baf8f1fa3872b8b",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "R2.regions.json",
+      "fixtureResponse": "fixture_responses/R2.json"
+    },
+    {
+      "fixtureSourceId": "O1",
+      "file": "O1.png",
+      "sha256": "c07e12bfdce700bef87d50288e66ac734ad7ddb2416cdb712f73f7eb0557ff02",
+      "kind": "supplied_official_update",
+      "sourceType": "official_communication",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        700
+      ],
+      "injectedText": null,
+      "regionsFile": "O1.regions.json",
+      "fixtureResponse": "fixture_responses/O1.json"
+    },
+    {
+      "fixtureSourceId": "S05",
+      "file": "S05_typed_account.txt",
+      "sha256": "cdd21a23bfdbcf095728c8b2a68c159d76715618d54097f52d9806dc831ef09a",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "injectedText": null,
+      "fixtureResponse": "fixture_responses/S05.json"
+    },
+    {
+      "fixtureSourceId": "U1",
+      "file": "U1_refund_update.txt",
+      "sha256": "262b2997c7dfa331ab6789877da6498b36f3deeed860df6335b8bdda96b9fb8a",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "injectedText": null,
+      "fixtureResponse": "fixture_responses/U1.json"
+    },
+    {
+      "fixtureSourceId": "B05",
+      "kind": "audio",
+      "language": "en",
+      "file": "../../audio/demo-b-B05.wav",
+      "sha256": "f7c9f50f07613176fa46f30ce1bbdad524961dabba292d75a9f94e6b8de1fec6",
+      "mediaType": "audio/wav",
+      "durationMs": 11667,
+      "provenance": "sapi_tts_english",
+      "fixtureTranscript": "../../audio/demo-b-B05.transcript.json"
+    },
+    {
+      "fixtureSourceId": "B05T",
+      "kind": "transcript",
+      "derivedFrom": "B05",
+      "sha256": "e78ee337920313242ec2a8e3f7c53b77ab20f2ab72d852a3f2c248045285f373",
+      "mediaType": "text/plain; charset=utf-8",
+      "fixtureResponse": "fixture_responses/B05T.json",
+      "expectedObservations": [
+        {
+          "amountInWords": true,
+          "expectedCorrection": "INR 20,000"
+        }
+      ]
+    },
+    {
+      "fixtureSourceId": "B06",
+      "kind": "audio",
+      "language": "hinglish",
+      "file": null,
+      "sha256": null,
+      "pendingOwnerRecording": true,
+      "script": "Maine Gadget Galaxy Deals ko bees hazaar rupaye do payments mein diye, phone aaya hi nahi aur seller ne block kar diya.",
+      "note": "No Hindi TTS voice on the dev machine; record with the in-app recorder, then rerun this script with --import"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "label": "DEMO-B-001",
+        "amountMinor": "1000000",
+        "status": "successful",
+        "direction": "debit",
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "label": "DEMO-B-002",
+        "amountMinor": "1000000",
+        "status": "successful",
+        "direction": "debit",
+        "sources": [
+          "S02"
+        ]
+      }
+    ],
+    "refunds": [
+      {
+        "label": "REF-B-RF1",
+        "amountMinor": "500000",
+        "sources": [
+          "R1"
+        ],
+        "allocations": [
+          [
+            "DEMO-B-001",
+            "500000"
+          ]
+        ]
+      },
+      {
+        "label": "REF-B-RF2",
+        "amountMinor": "1500000",
+        "sources": [
+          "R2"
+        ],
+        "allocations": [
+          [
+            "DEMO-B-001",
+            "500000"
+          ],
+          [
+            "DEMO-B-002",
+            "1000000"
+          ]
+        ]
+      }
+    ],
+    "officialStatus": [
+      {
+        "source": "O1",
+        "category": "forwarded",
+        "effectiveDate": "2026-10-20",
+        "reference": "DEMO-B-ACK-7781"
+      }
+    ],
+    "citizenReportedAmountMinor": "2000000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "2000000",
+      "pendingMinor": "0",
+      "matchedRefundMinorFinal": "2000000",
+      "outstandingMinorFinal": "0"
+    }
+  },
+  "updates": [
+    {
+      "step": 1,
+      "sources": [
+        "S01",
+        "S02"
+      ],
+      "expectedRecoveryState": "no_refund_reported",
+      "expectedOutstandingMinor": "2000000"
+    },
+    {
+      "step": 2,
+      "sources": [
+        "U1"
+      ],
+      "expectedRecoveryState": "refund_reported_awaiting_review",
+      "expectedOutstandingMinor": "2000000"
+    },
+    {
+      "step": 3,
+      "sources": [
+        "R1"
+      ],
+      "expectedRecoveryState": "partial_recovery_reviewed",
+      "expectedOutstandingMinor": "1500000"
+    },
+    {
+      "step": 5,
+      "sources": [
+        "R2"
+      ],
+      "expectedRecoveryState": "reviewed_baseline_fully_offset",
+      "expectedOutstandingMinor": "0"
+    },
+    {
+      "step": 8,
+      "sources": [
+        "O1"
+      ],
+      "expectedOfficialCategory": "forwarded",
+      "expectedOfficialEffective": "2026-10-20"
+    }
+  ],
+  "knownAmbiguities": [
+    "Refund references differ from the debit references by design; matching is an explicit reviewed allocation."
+  ]
+}

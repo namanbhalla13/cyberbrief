@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I paid 8,000 to Trendy Threads. The seller says they refunded me 8,000 but nothing has arrived in my account.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 8000",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "received",
+        "dateRaw": null,
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "I paid 8,000 to Trendy Threads. The seller says they refunded me 8,000 but nothi",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

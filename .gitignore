@@ -1,0 +1,46 @@
+# secrets and local config
+.env
+.env.*
+!.env.example
+
+# runtime data: uploaded material, DB, checkpoints, exports — never commit
+data/
+*.db
+*.db-wal
+*.db-shm
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.deepeval/
+
+# node
+node_modules/
+frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+
+# evaluation outputs (reports are regenerated)
+evals/reports/*
+!evals/reports/.gitkeep
+
+# editors / os
+.vscode/
+.idea/
+*.log
+Thumbs.db
+.DS_Store
+frontend/screens/
+
+# owner working notes kept locally; not part of the published repository
+Main_md_file/
+
+# local proxy trust for live mode in Docker (machine-specific)
+certs/
+compose.override.yaml
+
+# submission media stays local
+docs/

@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Successful Paid to HomeMart Essentials homemart.demo@demobank ₹18,500.00 14 Oct 2026, 09:10 AM HO7-TRUNC-998877 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹18,500.00",
+        "currency": "INR",
+        "referenceRaw": "HO7-TRU",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Successful",
+        "directionRaw": "Paid to",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "HomeMart Essentials (homemart.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹18,500.00 · HO7-TRUNC-998877",
+        "issues": [
+          "reference_truncated"
+        ]
+      }
+    ],
+    "unresolvedFields": [
+      "reference_truncated"
+    ]
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

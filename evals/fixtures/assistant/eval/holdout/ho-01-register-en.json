@@ -1,0 +1,13 @@
+{
+  "evalId": "ho-01-register-en",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "A seller on WhatsApp took ₹4,500 by UPI for a mixer grinder and then stopped answering.",
+      "expect": {
+        "suggestion": "register",
+        "language": "en"
+      }
+    }
+  ]
+}

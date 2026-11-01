@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Demo build Payment Pending Paid to Trendy Threads Store trendythreads.demo@demobank ₹5,000.00 13 Oct 2026, 09:15 AM UPI Ref No DEMO-A-003 From citizen.demo@demobank Status Pending Fictional demo receipt. Not a real payment.",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹5,000.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-A-003",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Pending",
+        "directionRaw": "Paid to",
+        "dateRaw": "13 Oct 2026, 09:15 AM",
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹5,000.00 · UPI Ref No DEMO-A-003",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

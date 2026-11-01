@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Demo build Payment Successful Paid to Trendy Threads Store trendythreads.demo@demobank ₹10,000.00 12 Oct 2026, 11:05 AM UPI Ref No DEMO-A-002 From citizen.demo@demobank Status Successful Fictional demo receipt. Not a real payment.",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹10,000.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-A-002",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Successful",
+        "directionRaw": "Paid to",
+        "dateRaw": "12 Oct 2026, 11:05 AM",
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹10,000.00 · UPI Ref No DEMO-A-002",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "packId": "dev-08",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Foreign currency mixed with INR",
+  "tags": [
+    "foreign_currency"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "fdf7841dc48d0a768b706e7d81467d33a2e6a52bf4f86b4d7bd31ba1265d5085",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "12000",
+          "currency": "USD",
+          "reference": "INTL-C8-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "USD stays outside INR accounting"
+          ]
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "7034b21f9c8626d7d35da4501cdda9e98704ae84bc65abb1babed27c94af9b4c",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "980000",
+          "currency": "INR",
+          "reference": "DEMO-C8-0002",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "INTL-C8-0001",
+        "amountMinor": "12000",
+        "currency": "USD",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "reference": "DEMO-C8-0002",
+        "amountMinor": "980000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S02"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [
+      {
+        "source": "S01",
+        "reason": "currency USD outside INR accounting"
+      }
+    ],
+    "citizenReportedAmountMinor": "980000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "980000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

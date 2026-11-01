@@ -1,0 +1,98 @@
+{
+  "spec": {
+    "name": "S02",
+    "amount_text": "\u20b945,000.00",
+    "reference": "SAL-OCT-2026",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "credit",
+    "date_text": "30 Sep 2026, 08:00 AM",
+    "payee_name": "Acme Payroll (fictional)",
+    "payee_vpa": "payroll.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    720,
+    1280
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 47,
+      "width": 162,
+      "height": 34,
+      "text": "DemoPay"
+    },
+    "status": {
+      "x": 186,
+      "y": 414,
+      "width": 348,
+      "height": 39,
+      "text": "Payment Received"
+    },
+    "direction": {
+      "x": 278,
+      "y": 480,
+      "width": 164,
+      "height": 19,
+      "text": "Received from"
+    },
+    "payee": {
+      "x": 183,
+      "y": 519,
+      "width": 353,
+      "height": 31,
+      "text": "Acme Payroll (fictional)"
+    },
+    "payee_vpa": {
+      "x": 233,
+      "y": 559,
+      "width": 253,
+      "height": 22,
+      "text": "payroll.demo@demobank"
+    },
+    "amount": {
+      "x": 176,
+      "y": 647,
+      "width": 368,
+      "height": 60,
+      "text": "\u20b945,000.00"
+    },
+    "date": {
+      "x": 237,
+      "y": 729,
+      "width": 245,
+      "height": 23,
+      "text": "30 Sep 2026, 08:00 AM"
+    },
+    "reference": {
+      "x": 72,
+      "y": 879,
+      "width": 190,
+      "height": 20,
+      "text": "SAL-OCT-2026"
+    },
+    "payer_vpa": {
+      "x": 72,
+      "y": 978,
+      "width": 315,
+      "height": 24,
+      "text": "citizen.demo@demobank"
+    },
+    "status_detail": {
+      "x": 72,
+      "y": 1078,
+      "width": 111,
+      "height": 21,
+      "text": "Received"
+    }
+  }
+}

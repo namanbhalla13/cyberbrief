@@ -1,0 +1,12 @@
+{
+  "evalId": "ho-06-fake-support",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Someone pretending to be customer care sent me a link and I paid 999 by UPI to get a refund. Now they are not answering.",
+      "expect": {
+        "suggestion": "register"
+      }
+    }
+  ]
+}

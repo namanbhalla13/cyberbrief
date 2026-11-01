@@ -1,0 +1,191 @@
+{
+  "packId": "ho-02",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Cropped duplicate and a status change on the same reference",
+  "tags": [
+    "cropped_duplicate",
+    "status_conflict"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "ca3305008361af28dfdef9e026d50230e4f0fc111267886bf48c5312af6b5b9e",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "700000",
+          "currency": "INR",
+          "reference": "HO2-7000",
+          "referenceTruncatedInImage": false,
+          "status": "pending",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "97ff2963bd284b5beb939dafad15535fb482a0d9a86b49ef781e8c386f88db93",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "700000",
+          "currency": "INR",
+          "reference": "HO2-7000",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "same reference later shows Completed: a status change to review, not a second payment"
+          ]
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "S03",
+      "file": "S03.jpg",
+      "sha256": "8a93fad501fb679091ad33c5b269a78e9b516aa4c8f4014ce73f531c8c823665",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/jpeg",
+      "imageSize": [
+        612,
+        217
+      ],
+      "injectedText": null,
+      "regionsFile": "S03.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "700000",
+          "currency": "INR",
+          "reference": "HO2-7000",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": "amount_ref_only",
+          "degrade": {
+            "downscale": 0.85,
+            "jpeg_quality": 80
+          },
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": false,
+            "date": false
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {
+        "dateRaw": null,
+        "statusRaw": null,
+        "accountScopeRaw": null,
+        "issues": [
+          "date_missing",
+          "cropped_image",
+          "status_not_visible"
+        ]
+      },
+      "fixtureResponse": "fixture_responses/S03.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO2-7000",
+        "amountMinor": "700000",
+        "currency": "INR",
+        "status": "pending",
+        "includeInIncident": true,
+        "sources": [
+          "S01",
+          "S02",
+          "S03"
+        ],
+        "statusConflict": true
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [
+      [
+        "S01",
+        "S02"
+      ],
+      [
+        "S01",
+        "S03"
+      ]
+    ],
+    "excluded": [],
+    "citizenReportedAmountMinor": "700000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "0",
+      "pendingMinor": "700000"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

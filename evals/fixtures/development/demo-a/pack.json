@@ -1,0 +1,249 @@
+{
+  "packId": "demo-a",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Demo A — duplicate receipt and pending payment",
+  "labelProvenance": {
+    "author": "owner (fixture designer)",
+    "method": "authored from generator specifications; synthetic images; not model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/gen_receipt.py",
+    "layout": "variant_a",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "6ea6a0ddad3553b2b6fb45774073d45929999c11b95a0f98cd69bc33d714ec2e",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "amountMinor": "1000000",
+          "currency": "INR",
+          "reference": "DEMO-A-001",
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-12",
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          }
+        }
+      ],
+      "regionsFile": "S01.regions.json",
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.jpg",
+      "sha256": "4a2ac141714f0cf83b700cd78624304292ae300c0032e3c001b5d64d03fa8dfc",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/jpeg",
+      "imageSize": [
+        612,
+        251
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "amountMinor": "1000000",
+          "currency": "INR",
+          "reference": "DEMO-A-001",
+          "status": null,
+          "direction": "debit",
+          "date": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": false,
+            "date": false
+          }
+        }
+      ],
+      "regionsFile": "S02.regions.json",
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "S03",
+      "file": "S03.png",
+      "sha256": "77ddc7bf7b565771e049bde96ca8aa1f73996c7aab8bbcadc9dfdb7b9fe98432",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "amountMinor": "1000000",
+          "currency": "INR",
+          "reference": "DEMO-A-002",
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-12",
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          }
+        }
+      ],
+      "regionsFile": "S03.regions.json",
+      "fixtureResponse": "fixture_responses/S03.json"
+    },
+    {
+      "fixtureSourceId": "S04",
+      "file": "S04.png",
+      "sha256": "5bbbdaee3e9ca166a6cccc60b26335f24c19470c4bd5a33fc919619a51331c37",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "amountMinor": "500000",
+          "currency": "INR",
+          "reference": "DEMO-A-003",
+          "status": "pending",
+          "direction": "debit",
+          "date": "2026-10-13",
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          }
+        }
+      ],
+      "regionsFile": "S04.regions.json",
+      "fixtureResponse": "fixture_responses/S04.json"
+    },
+    {
+      "fixtureSourceId": "S05",
+      "file": "S05_typed_account.txt",
+      "sha256": "dba243ed39d894ff1b73be695f8ffe302d93f4635e93a7cb0ae97f71eb968a89",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "citizenReportedAmountMinor": "2500000",
+          "relativeDateUnresolved": true
+        }
+      ],
+      "fixtureResponse": "fixture_responses/S05.json"
+    },
+    {
+      "fixtureSourceId": "A05",
+      "kind": "audio",
+      "language": "en",
+      "file": "../../audio/demo-a-A05.wav",
+      "sha256": "bed559bcdca9e41b8dbe434286ffaa04dd0a4511135cbbc934991f50234dcbba",
+      "mediaType": "audio/wav",
+      "durationMs": 15972,
+      "provenance": "sapi_tts_english",
+      "fixtureTranscript": "../../audio/demo-a-A05.transcript.json"
+    },
+    {
+      "fixtureSourceId": "A05T",
+      "kind": "transcript",
+      "derivedFrom": "A05",
+      "sha256": "b7e989de69ec9f92a155c76d697c4088aa86aecb84ee02dbb2c34875a8e2e684",
+      "mediaType": "text/plain; charset=utf-8",
+      "fixtureResponse": "fixture_responses/A05T.json",
+      "expectedObservations": [
+        {
+          "amountInWords": true,
+          "expectedCorrection": "INR 25,000"
+        }
+      ]
+    },
+    {
+      "fixtureSourceId": "A06",
+      "kind": "audio",
+      "language": "hi",
+      "file": null,
+      "sha256": null,
+      "pendingOwnerRecording": true,
+      "script": "मैंने ट्रेंडी थ्रेड्स स्टोर को कुल पच्चीस हज़ार रुपये यूपीआई से दिए। सामान नहीं आया और उन्होंने जवाब देना बंद कर दिया।",
+      "note": "No Hindi TTS voice on the dev machine; record with the in-app recorder, then rerun this script with --import"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "label": "DEMO-A-001",
+        "amountMinor": "1000000",
+        "currency": "INR",
+        "status": "successful",
+        "direction": "debit",
+        "sources": [
+          "S01",
+          "S02"
+        ]
+      },
+      {
+        "label": "DEMO-A-002",
+        "amountMinor": "1000000",
+        "currency": "INR",
+        "status": "successful",
+        "direction": "debit",
+        "sources": [
+          "S03"
+        ]
+      },
+      {
+        "label": "DEMO-A-003",
+        "amountMinor": "500000",
+        "currency": "INR",
+        "status": "pending",
+        "direction": "debit",
+        "sources": [
+          "S04"
+        ]
+      }
+    ],
+    "duplicateCandidates": [
+      [
+        "S01",
+        "S02"
+      ]
+    ],
+    "citizenReportedAmountMinor": "2500000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "2000000",
+      "pendingMinor": "500000",
+      "outstandingMinor": "2000000"
+    },
+    "expectedQuestions": [
+      "Has the INR 5,000 payment completed, failed, or remained pending?",
+      "You reported INR 25,000, while the reviewed successful receipts total INR 20,000. Is there another payment?"
+    ]
+  },
+  "knownAmbiguities": [
+    "S02 is a cropped re-save of S01: no date, status or payer visible; same reference.",
+    "S05 says 'yesterday' for the pending payment; the date must stay unresolved."
+  ],
+  "updates": []
+}

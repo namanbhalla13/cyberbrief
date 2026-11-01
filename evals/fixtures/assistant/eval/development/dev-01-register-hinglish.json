@@ -1,0 +1,13 @@
+{
+  "evalId": "dev-01-register-hinglish",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Maine Instagram pe ek seller se shoes order kiye the, 2,499 UPI se pay kiya. Ab usne mera number block kar diya.",
+      "expect": {
+        "suggestion": "register",
+        "language": "hinglish"
+      }
+    }
+  ]
+}

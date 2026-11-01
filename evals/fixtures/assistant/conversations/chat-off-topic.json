@@ -1,0 +1,41 @@
+{
+  "scriptId": "chat-off-topic",
+  "label": "Fictional. Off-topic and promise-bait messages before any complaint exists.",
+  "requiresCase": false,
+  "turns": [
+    {
+      "citizen": "Who won the cricket match yesterday?",
+      "reply": {
+        "topic": "off_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "Will I definitely get my money back?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "I understand why you want to know.",
+        "slotUpdates": [],
+        "helpIds": [
+          "cannot-predict"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    }
+  ]
+}

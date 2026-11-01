@@ -1,0 +1,15 @@
+{
+  "evalId": "ho-02-timeline-hinglish",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "Kitne din mein paisa wapas aayega?",
+      "expect": {
+        "help": [
+          "cannot-predict"
+        ],
+        "language": "hinglish"
+      }
+    }
+  ]
+}

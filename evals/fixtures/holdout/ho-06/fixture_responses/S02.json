@@ -1,0 +1,32 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "PayLedger Account statement UPI/DR Trendy Threads Store trendythreads.demo@demobank ₹2,200.00 14 Oct 2026, 09:10 AM HO6-SAME-01 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹2,200.00",
+        "currency": "INR",
+        "referenceRaw": "HO6-SAME-01",
+        "referenceType": "UPI reference in description",
+        "statusRaw": null,
+        "directionRaw": "UPI/DR",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹2,200.00 · HO6-SAME-01",
+        "issues": [
+          "status_not_visible"
+        ]
+      }
+    ],
+    "unresolvedFields": [
+      "status"
+    ]
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

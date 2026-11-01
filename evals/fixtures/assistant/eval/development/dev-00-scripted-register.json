@@ -1,0 +1,52 @@
+{
+  "evalId": "dev-00-scripted-register",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "I saw an ad for Trendy Threads Store and ordered clothes on 12 October 2026. Nothing was delivered and they stopped replying to my messages.",
+      "expect": {
+        "language": "en",
+        "offTopic": false
+      }
+    },
+    {
+      "citizen": "I paid them INR 25,000 in total through UPI in a few payments. The last payment was yesterday and still shows as pending in my app.",
+      "expect": {
+        "suggestion": "register",
+        "language": "en"
+      }
+    },
+    {
+      "citizen": "What is the status of my complaint?",
+      "requiresCase": true,
+      "expect": {
+        "status": true
+      }
+    },
+    {
+      "citizen": "Will I definitely get my money back?",
+      "requiresCase": true,
+      "expect": {
+        "help": [
+          "cannot-predict"
+        ]
+      }
+    },
+    {
+      "citizen": "Who won the cricket match yesterday?",
+      "requiresCase": true,
+      "expect": {
+        "offTopic": true
+      }
+    },
+    {
+      "citizen": "What happens after I submit?",
+      "requiresCase": true,
+      "expect": {
+        "help": [
+          "submit-means"
+        ]
+      }
+    }
+  ]
+}

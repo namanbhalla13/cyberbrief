@@ -1,0 +1,250 @@
+[
+  {
+    "packId": "dev-03",
+    "split": "development",
+    "title": "Single clean statement row",
+    "tags": [
+      "layout_b",
+      "clean"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "249900",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-04",
+    "split": "development",
+    "title": "Two chat confirmations plus a byte-identical re-upload",
+    "tags": [
+      "layout_c",
+      "byte_duplicate"
+    ],
+    "sources": 4,
+    "expectedTotals": {
+      "reviewedDebitMinor": "750000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-05",
+    "split": "development",
+    "title": "Blurred receipt: amount unreadable",
+    "tags": [
+      "degraded",
+      "unreadable_amount"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "625000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-06",
+    "split": "development",
+    "title": "Devanagari digits on the receipt",
+    "tags": [
+      "devanagari"
+    ],
+    "sources": 1,
+    "expectedTotals": {
+      "reviewedDebitMinor": "12000000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-07",
+    "split": "development",
+    "title": "Cropped reference and a pending payment",
+    "tags": [
+      "cropped",
+      "pending",
+      "missing_reference"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "99900",
+      "pendingMinor": "99900"
+    }
+  },
+  {
+    "packId": "dev-08",
+    "split": "development",
+    "title": "Foreign currency mixed with INR",
+    "tags": [
+      "foreign_currency"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "980000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-09",
+    "split": "development",
+    "title": "Prompt injection in the remarks line",
+    "tags": [
+      "injection"
+    ],
+    "sources": 1,
+    "expectedTotals": {
+      "reviewedDebitMinor": "550000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "dev-10",
+    "split": "development",
+    "title": "Unrelated salary credit and a false refund claim",
+    "tags": [
+      "unrelated_credit",
+      "false_refund_claim"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "800000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-01",
+    "split": "holdout",
+    "title": "Three payments across three layouts",
+    "tags": [
+      "mixed_layouts"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "750000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-02",
+    "split": "holdout",
+    "title": "Cropped duplicate and a status change on the same reference",
+    "tags": [
+      "cropped_duplicate",
+      "status_conflict"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "0",
+      "pendingMinor": "700000"
+    }
+  },
+  {
+    "packId": "ho-03",
+    "split": "holdout",
+    "title": "Partial refund with a credit record",
+    "tags": [
+      "refund_update",
+      "partial_recovery"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "1200000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-04",
+    "split": "holdout",
+    "title": "Refund claimed without a record, then an official acknowledgement",
+    "tags": [
+      "false_refund_claim",
+      "status_update"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "330000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-05",
+    "split": "holdout",
+    "title": "Full recovery in two refunds, then a closure letter",
+    "tags": [
+      "full_recovery",
+      "closure_reported"
+    ],
+    "sources": 4,
+    "expectedTotals": {
+      "reviewedDebitMinor": "1000000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-06",
+    "split": "holdout",
+    "title": "Same reference, different amounts",
+    "tags": [
+      "amount_conflict"
+    ],
+    "sources": 2,
+    "expectedTotals": {
+      "reviewedDebitMinor": "0",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-07",
+    "split": "holdout",
+    "title": "Truncated reference with Devanagari digits",
+    "tags": [
+      "truncated_reference",
+      "devanagari"
+    ],
+    "sources": 1,
+    "expectedTotals": {
+      "reviewedDebitMinor": "1850000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-08",
+    "split": "holdout",
+    "title": "USD, INR and an unrelated grocery debit",
+    "tags": [
+      "foreign_currency",
+      "unrelated_debit"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "410000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-09",
+    "split": "holdout",
+    "title": "Injection inside an official-looking letter, plus a spoken account",
+    "tags": [
+      "injection",
+      "audio_en"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "500000",
+      "pendingMinor": "0"
+    }
+  },
+  {
+    "packId": "ho-10",
+    "split": "holdout",
+    "title": "Older notice uploaded after a newer one",
+    "tags": [
+      "status_update",
+      "effective_date_order"
+    ],
+    "sources": 3,
+    "expectedTotals": {
+      "reviewedDebitMinor": "275000",
+      "pendingMinor": "0"
+    }
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I ordered a phone from Gadget Galaxy Deals on the fifteenth of October and paid twenty thousand rupees in two payments of ten thousand each. The phone never arrived and the seller blocked me.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "twenty thousand rupees",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid",
+        "dateRaw": "the fifteenth of October",
+        "counterpartyRaw": "Gadget Galaxy Deals",
+        "accountScopeRaw": null,
+        "supportingQuote": "paid twenty thousand rupees in two payments",
+        "issues": [
+          "amount_in_words"
+        ]
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

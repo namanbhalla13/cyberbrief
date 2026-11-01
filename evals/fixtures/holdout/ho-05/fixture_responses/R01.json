@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Received Received from Gadget Galaxy Deals gadgetgalaxy.demo@demobank ₹6,000.00 20 Oct 2026, 03:00 PM HO5-RF-0001 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "refund_credit",
+        "amountRaw": "₹6,000.00",
+        "currency": "INR",
+        "referenceRaw": "HO5-RF-0001",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Received",
+        "directionRaw": "Received from",
+        "dateRaw": "20 Oct 2026, 03:00 PM",
+        "counterpartyRaw": "Gadget Galaxy Deals (gadgetgalaxy.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹6,000.00 · HO5-RF-0001",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

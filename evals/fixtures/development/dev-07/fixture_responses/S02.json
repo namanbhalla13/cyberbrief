@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "DemoPay Payment Pending Paid to HomeMart Essentials homemart.demo@demobank ₹999.00 14 Oct 2026, 09:10 AM DEMO-C7-2222 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹999.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-C7-2222",
+        "referenceType": "UPI Ref No",
+        "statusRaw": "Payment Pending",
+        "directionRaw": "Paid to",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "HomeMart Essentials (homemart.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹999.00 · DEMO-C7-2222",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

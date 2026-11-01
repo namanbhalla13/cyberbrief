@@ -1,0 +1,13 @@
+{
+  "evalId": "dev-10-hindi-register",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "मैंने ऑनलाइन कपड़े मंगवाए, UPI से 1,800 रुपये दिए, लेकिन सामान नहीं आया।",
+      "expect": {
+        "suggestion": "register",
+        "language": "hi"
+      }
+    }
+  ]
+}

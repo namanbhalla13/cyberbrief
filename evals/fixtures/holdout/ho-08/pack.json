@@ -1,0 +1,196 @@
+{
+  "packId": "ho-08",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "USD, INR and an unrelated grocery debit",
+  "tags": [
+    "foreign_currency",
+    "unrelated_debit"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "a691add7a03072563a3526e3208c9646ce66b7effa2150cf6c5b0e88d74d5442",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "7500",
+          "currency": "USD",
+          "reference": "HO8-INTL-01",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "7553864b78765ba56333cb1c4417917977f87b4e74990c93d0de22ce4aae556e",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "410000",
+          "currency": "INR",
+          "reference": "HO8-INR-02",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_c",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    },
+    {
+      "fixtureSourceId": "S03",
+      "file": "S03.png",
+      "sha256": "24628c40e02d4d1ee25c1df03a54bd0f145dd0a740fe5c3e13df4c529ab5604d",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S03.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "86000",
+          "currency": "INR",
+          "reference": "HO8-GROC-03",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": false,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "grocery payment; excluded with a reason"
+          ]
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S03.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO8-INTL-01",
+        "amountMinor": "7500",
+        "currency": "USD",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "reference": "HO8-INR-02",
+        "amountMinor": "410000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S02"
+        ]
+      },
+      {
+        "reference": "HO8-GROC-03",
+        "amountMinor": "86000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": false,
+        "sources": [
+          "S03"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [
+      {
+        "source": "S01",
+        "reason": "currency USD outside INR accounting"
+      },
+      {
+        "source": "S03",
+        "reason": "unrelated to the incident"
+      }
+    ],
+    "citizenReportedAmountMinor": "410000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "410000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

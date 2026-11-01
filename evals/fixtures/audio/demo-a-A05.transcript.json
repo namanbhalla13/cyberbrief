@@ -1,0 +1,13 @@
+{
+  "transcript": "I ordered clothes from Trendy Threads Store on the twelfth of October. I paid them twenty five thousand rupees in total through U P I. Nothing was delivered and they stopped replying. The last payment was yesterday and still shows as pending.",
+  "audioDurationMs": 15972,
+  "turns": [
+    {
+      "turnId": 0,
+      "startMs": 0,
+      "endMs": 15972,
+      "transcript": "I ordered clothes from Trendy Threads Store on the twelfth of October. I paid them twenty five thousand rupees in total through U P I. Nothing was delivered and they stopped replying. The last payment was yesterday and still shows as pending."
+    }
+  ],
+  "labelProvenance": "authored script spoken by Windows SAPI TTS (English voice); not model output"
+}

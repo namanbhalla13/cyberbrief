@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "Update: I received INR 5,000 back from the seller on 20 October 2026.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 5,000",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "received back",
+        "dateRaw": "20 October 2026",
+        "counterpartyRaw": "the seller",
+        "accountScopeRaw": null,
+        "supportingQuote": "I received INR 5,000 back from the seller",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "scriptId": "chat-register",
+  "label": "Fictional. Authored to match the Demo A pack so the drafted account replays its typed-account fixture.",
+  "requiresCase": false,
+  "publicStartPack": "demo-a",
+  "turns": [
+    {
+      "citizen": "I saw an ad for Trendy Threads Store and ordered clothes on 12 October 2026. Nothing was delivered and they stopped replying to my messages.",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "describe_incident",
+        "language": "en",
+        "reply": "I'm sorry this happened. Did you pay them, and if so, how did you pay?",
+        "slotUpdates": [
+          {
+            "slot": "what_happened",
+            "value": "item_not_delivered",
+            "quote": "Nothing was delivered"
+          },
+          {
+            "slot": "when",
+            "value": "12 October 2026",
+            "quote": "ordered clothes on 12 October 2026"
+          }
+        ],
+        "helpIds": [],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "I paid them INR 25,000 in total through UPI in a few payments. The last payment was yesterday and still shows as pending in my app.",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "describe_incident",
+        "language": "en",
+        "reply": "Thank you for telling me. Below is what I would file from what you said. Shall I start your complaint?",
+        "slotUpdates": [
+          {
+            "slot": "money_paid",
+            "value": "yes",
+            "quote": "I paid them INR 25,000"
+          },
+          {
+            "slot": "payment_method",
+            "value": "upi",
+            "quote": "through UPI"
+          }
+        ],
+        "helpIds": [
+          "you-check-first"
+        ],
+        "actions": [
+          {
+            "type": "offer_start_complaint",
+            "questionId": null,
+            "text": null,
+            "amountText": null
+          }
+        ],
+        "draft": {
+          "title": "Clothes order from Trendy Threads Store not delivered",
+          "account": "I saw an ad for Trendy Threads Store and ordered clothes on 12 October 2026. I paid them INR 25,000 in total through UPI in a few payments. Nothing was delivered and they stopped replying to my messages. The last payment was yesterday and still shows as pending in my app."
+        }
+      }
+    },
+    {
+      "citizen": "What is the status of my complaint?",
+      "requiresCase": true,
+      "reply": {
+        "topic": "on_topic",
+        "intent": "ask_status",
+        "language": "en",
+        "reply": "Here is where your complaint stands.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "Will I definitely get my money back?",
+      "requiresCase": true,
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "I understand why you want to know.",
+        "slotUpdates": [],
+        "helpIds": [
+          "cannot-predict"
+        ],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "Who won the cricket match yesterday?",
+      "requiresCase": true,
+      "reply": {
+        "topic": "off_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    },
+    {
+      "citizen": "What happens after I submit?",
+      "requiresCase": true,
+      "reply": {
+        "topic": "on_topic",
+        "intent": "ask_help",
+        "language": "en",
+        "reply": "Here is what happens.",
+        "slotUpdates": [],
+        "helpIds": [
+          "submit-means",
+          "after-submit"
+        ],
+        "actions": [
+          {
+            "type": "offer_submit",
+            "questionId": null,
+            "text": null,
+            "amountText": null
+          }
+        ],
+        "draft": {
+          "title": null,
+          "account": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "packId": "dev-05",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Blurred receipt: amount unreadable",
+  "tags": [
+    "degraded",
+    "unreadable_amount"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.jpg",
+      "sha256": "3b1d48173d5e76f9c9ea243c14d9c5f4256f3268f15ed77030a0f1b8a544c129",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/jpeg",
+      "imageSize": [
+        432,
+        768
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "625000",
+          "currency": "INR",
+          "reference": "DEMO-C5-0042",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {
+            "blur": 3.5,
+            "downscale": 0.6
+          },
+          "injectedText": null,
+          "readable": {
+            "amount": false,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": [
+            "amount is unreadable at this blur; must be asked, not guessed"
+          ]
+        }
+      ],
+      "declaredImperfections": {
+        "amountRaw": null,
+        "issues": [
+          "amount_unreadable"
+        ]
+      },
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "T01",
+      "file": "T01.txt",
+      "sha256": "c67c6f5e35700e579b90f96ddef998b353104bfcef6e0de2c035607b65bad558",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "expectedObservations": [
+        {
+          "claimText": "I paid around six thousand two hundred fifty rupees but the screenshot is blurry.",
+          "refundClaimed": false
+        }
+      ],
+      "fixtureResponse": "fixture_responses/T01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "DEMO-C5-0042",
+        "amountMinor": "625000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "625000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "625000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

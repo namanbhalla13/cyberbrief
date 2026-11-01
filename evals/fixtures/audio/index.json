@@ -1,0 +1,44 @@
+[
+  {
+    "pack": "demo-a",
+    "source": "A05",
+    "language": "en",
+    "file": "demo-a-A05.wav",
+    "sha256": "bed559bcdca9e41b8dbe434286ffaa04dd0a4511135cbbc934991f50234dcbba",
+    "durationMs": 15972,
+    "provenance": "sapi_tts_english",
+    "transcriptFile": "demo-a-A05.transcript.json"
+  },
+  {
+    "pack": "demo-b",
+    "source": "B05",
+    "language": "en",
+    "file": "demo-b-B05.wav",
+    "sha256": "f7c9f50f07613176fa46f30ce1bbdad524961dabba292d75a9f94e6b8de1fec6",
+    "durationMs": 11667,
+    "provenance": "sapi_tts_english",
+    "transcriptFile": "demo-b-B05.transcript.json"
+  },
+  {
+    "pack": "demo-a",
+    "source": "A06",
+    "language": "hi",
+    "file": null,
+    "sha256": null,
+    "durationMs": null,
+    "provenance": "pending_owner_recording",
+    "script": "मैंने ट्रेंडी थ्रेड्स स्टोर को कुल पच्चीस हज़ार रुपये यूपीआई से दिए। सामान नहीं आया और उन्होंने जवाब देना बंद कर दिया।",
+    "note": "No Hindi TTS voice on the dev machine; record with the in-app recorder, then rerun this script with --import"
+  },
+  {
+    "pack": "demo-b",
+    "source": "B06",
+    "language": "hinglish",
+    "file": null,
+    "sha256": null,
+    "durationMs": null,
+    "provenance": "pending_owner_recording",
+    "script": "Maine Gadget Galaxy Deals ko bees hazaar rupaye do payments mein diye, phone aaya hi nahi aur seller ne block kar diya.",
+    "note": "No Hindi TTS voice on the dev machine; record with the in-app recorder, then rerun this script with --import"
+  }
+]

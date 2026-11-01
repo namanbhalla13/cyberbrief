@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "QuickUPI Completed You paid Trendy Threads Store trendythreads.demo@demobank ₹3,500.00 16 Oct 2026, 11:00 AM HO1-C-0003 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹3,500.00",
+        "currency": "INR",
+        "referenceRaw": "HO1-C-0003",
+        "referenceType": "UPI transaction ID",
+        "statusRaw": "Completed",
+        "directionRaw": "You paid",
+        "dateRaw": "16 Oct 2026, 11:00 AM",
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹3,500.00 · HO1-C-0003",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

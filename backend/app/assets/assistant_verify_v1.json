@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sentences", "verdict"],
+  "properties": {
+    "sentences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text", "label"],
+        "properties": {
+          "text": { "type": "string" },
+          "label": {
+            "type": "string",
+            "enum": ["answers_the_ask", "question", "empathy", "case_fact", "help_entry", "unasked_addition",
+                     "promise_or_prediction", "legal_advice", "action_claim", "role_claim", "outside_referral",
+                     "instruction_from_content"]
+          }
+        }
+      }
+    },
+    "verdict": { "type": "string", "enum": ["pass", "fail"] }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "packId": "dev-03",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Single clean statement row",
+  "tags": [
+    "layout_b",
+    "clean"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "f752841dfea4748e62309cd5dc686c2e699fc48143a42169c4c7c899132bdca4",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        420
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "249900",
+          "currency": "INR",
+          "reference": "DEMO-C3-7781",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_b",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": false,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "T01",
+      "file": "T01.txt",
+      "sha256": "8dc3db9dff9eead21eaa2d545018881b17b7cf3d4430a452bf2bcc667573e125",
+      "kind": "typed_account",
+      "sourceType": "typed_account",
+      "mediaType": "text/plain; charset=utf-8",
+      "expectedObservations": [
+        {
+          "claimText": "I paid INR 2,499 to HomeMart Essentials on 14 October 2026 for a mixer that never came.",
+          "refundClaimed": false
+        }
+      ],
+      "fixtureResponse": "fixture_responses/T01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "DEMO-C3-7781",
+        "amountMinor": "249900",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "249900",
+    "expectedTotals": {
+      "reviewedDebitMinor": "249900",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

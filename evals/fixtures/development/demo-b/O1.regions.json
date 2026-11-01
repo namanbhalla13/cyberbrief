@@ -1,0 +1,45 @@
+{
+  "spec": {
+    "name": "O1",
+    "reference": "DEMO-B-ACK-7781",
+    "date_text": "20 Oct 2026",
+    "status_text": "Your complaint has been acknowledged and forwarded to the concerned bank for necessary action. You will be informed of further developments.",
+    "issuer": "Demo Cyber Helpdesk (fictional)",
+    "addressee": "Dear complainant,",
+    "seed": 1
+  },
+  "imageSize": [
+    900,
+    700
+  ],
+  "regions": {
+    "issuer": {
+      "x": 40,
+      "y": 38,
+      "width": 460,
+      "height": 30,
+      "text": "Demo Cyber Helpdesk (fictional)"
+    },
+    "reference": {
+      "x": 40,
+      "y": 167,
+      "width": 401,
+      "height": 22,
+      "text": "Complaint reference: DEMO-B-ACK-7781"
+    },
+    "date": {
+      "x": 40,
+      "y": 204,
+      "width": 174,
+      "height": 16,
+      "text": "Date: 20 Oct 2026"
+    },
+    "status": {
+      "x": 40,
+      "y": 296,
+      "width": 705.984375,
+      "height": 102,
+      "text": "Your complaint has been acknowledged and forwarded to the concerned bank for necessary action. You will be informed of further developments."
+    }
+  }
+}

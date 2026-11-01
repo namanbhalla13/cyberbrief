@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "QuickUPI Pending You paid Gadget Galaxy Deals gadgetgalaxy.demo@demobank ₹7,000.00 14 Oct 2026, 09:10 AM HO2-7000 citizen.demo@demobank",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹7,000.00",
+        "currency": "INR",
+        "referenceRaw": "HO2-7000",
+        "referenceType": "UPI transaction ID",
+        "statusRaw": "Pending",
+        "directionRaw": "You paid",
+        "dateRaw": "14 Oct 2026, 09:10 AM",
+        "counterpartyRaw": "Gadget Galaxy Deals (gadgetgalaxy.demo@demobank)",
+        "accountScopeRaw": "citizen.demo@demobank",
+        "supportingQuote": "₹7,000.00 · HO2-7000",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

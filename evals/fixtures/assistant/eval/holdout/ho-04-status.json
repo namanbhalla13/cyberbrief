@@ -1,0 +1,14 @@
+{
+  "evalId": "ho-04-status",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "withComplaint": true,
+  "complaintTitle": "Evaluation complaint",
+  "turns": [
+    {
+      "citizen": "What is happening with my complaint?",
+      "expect": {
+        "status": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "packId": "dev-07",
+  "split": "development",
+  "schemaVersion": "1",
+  "title": "Cropped reference and a pending payment",
+  "tags": [
+    "cropped",
+    "pending",
+    "missing_reference"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "6a06b0503898add43a0fb092be390e69d5e09d17b8bea2191229b5b6cae0416b",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        790
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "99900",
+          "currency": "INR",
+          "reference": "DEMO-C7-1111",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": "bottom_cut",
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": false,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {
+        "referenceRaw": null,
+        "accountScopeRaw": null,
+        "issues": [
+          "reference_not_visible",
+          "cropped_image"
+        ]
+      },
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "S02",
+      "file": "S02.png",
+      "sha256": "09ed7a972273f20d1a83b3b4b1edc48cc0225f3fced36dbf6c6a5021961adf6c",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "99900",
+          "currency": "INR",
+          "reference": "DEMO-C7-2222",
+          "referenceTruncatedInImage": false,
+          "status": "pending",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S02.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "DEMO-C7-1111",
+        "amountMinor": "99900",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      },
+      {
+        "reference": "DEMO-C7-2222",
+        "amountMinor": "99900",
+        "currency": "INR",
+        "status": "pending",
+        "includeInIncident": true,
+        "sources": [
+          "S02"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "199800",
+    "expectedTotals": {
+      "reviewedDebitMinor": "99900",
+      "pendingMinor": "99900"
+    }
+  },
+  "updates": [],
+  "knownAmbiguities": []
+}

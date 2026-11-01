@@ -1,0 +1,77 @@
+{
+  "scriptId": "chat-lookups",
+  "label": "Fictional. For a chat opened from an existing complaint: the read-only lookups, each shown as a card from the record.",
+  "requiresCase": true,
+  "turns": [
+    {
+      "citizen": "What do you have on my complaint?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "Here is what I have on your complaint.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "lookups": ["details"],
+        "draft": { "title": null, "account": null }
+      }
+    },
+    {
+      "citizen": "Which files have you read?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "Here are the files on your complaint.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "lookups": ["evidence"],
+        "draft": { "title": null, "account": null }
+      }
+    },
+    {
+      "citizen": "What have you noted so far?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "Here is what I have noted from our chat.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "lookups": ["recap"],
+        "draft": { "title": null, "account": null }
+      }
+    },
+    {
+      "citizen": "What are my other complaints?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "Here are your complaints.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "lookups": ["my_complaints"],
+        "draft": { "title": null, "account": null }
+      }
+    },
+    {
+      "citizen": "What should I do next?",
+      "reply": {
+        "topic": "on_topic",
+        "intent": "other",
+        "language": "en",
+        "reply": "Here is the next step.",
+        "slotUpdates": [],
+        "helpIds": [],
+        "actions": [],
+        "lookups": ["next_step"],
+        "draft": { "title": null, "account": null }
+      }
+    }
+  ]
+}

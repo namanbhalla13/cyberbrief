@@ -1,0 +1,97 @@
+{
+  "spec": {
+    "name": "S02",
+    "amount_text": "\u20b910,000.00",
+    "reference": "DEMO-B-002",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "15 Oct 2026, 06:20 PM",
+    "payee_name": "Gadget Galaxy Deals",
+    "payee_vpa": "gadgetgalaxy.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "digit_script": "latin",
+    "layout": "variant_a",
+    "fmt": "png",
+    "crop": null,
+    "degrade": {},
+    "seed": 1
+  },
+  "imageSize": [
+    720,
+    1280
+  ],
+  "regions": {
+    "app_name": {
+      "x": 28,
+      "y": 47,
+      "width": 162,
+      "height": 34,
+      "text": "DemoPay"
+    },
+    "status": {
+      "x": 174,
+      "y": 414,
+      "width": 371,
+      "height": 39,
+      "text": "Payment Successful"
+    },
+    "direction": {
+      "x": 320,
+      "y": 480,
+      "width": 80,
+      "height": 19,
+      "text": "Paid to"
+    },
+    "payee": {
+      "x": 205,
+      "y": 519,
+      "width": 309,
+      "height": 31,
+      "text": "Gadget Galaxy Deals"
+    },
+    "payee_vpa": {
+      "x": 201,
+      "y": 559,
+      "width": 317,
+      "height": 22,
+      "text": "gadgetgalaxy.demo@demobank"
+    },
+    "amount": {
+      "x": 176,
+      "y": 647,
+      "width": 368,
+      "height": 60,
+      "text": "\u20b910,000.00"
+    },
+    "date": {
+      "x": 240,
+      "y": 729,
+      "width": 240,
+      "height": 20,
+      "text": "15 Oct 2026, 06:20 PM"
+    },
+    "reference": {
+      "x": 72,
+      "y": 879,
+      "width": 172,
+      "height": 20,
+      "text": "DEMO-B-002"
+    },
+    "payer_vpa": {
+      "x": 72,
+      "y": 978,
+      "width": 315,
+      "height": 24,
+      "text": "citizen.demo@demobank"
+    },
+    "status_detail": {
+      "x": 72,
+      "y": 1078,
+      "width": 128,
+      "height": 21,
+      "text": "Successful"
+    }
+  }
+}

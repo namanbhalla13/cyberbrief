@@ -1,0 +1,36 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "receipt",
+    "language": "en",
+    "visibleText": "₹10,000.00 UPI Ref No DEMO-A-001",
+    "observations": [
+      {
+        "kind": "payment",
+        "amountRaw": "₹10,000.00",
+        "currency": "INR",
+        "referenceRaw": "DEMO-A-001",
+        "referenceType": "UPI Ref No",
+        "statusRaw": null,
+        "directionRaw": "Paid to",
+        "dateRaw": null,
+        "counterpartyRaw": "Trendy Threads Store (trendythreads.demo@demobank)",
+        "accountScopeRaw": null,
+        "supportingQuote": "₹10,000.00 · UPI Ref No DEMO-A-001",
+        "issues": [
+          "date_missing",
+          "cropped_image",
+          "status_not_visible"
+        ]
+      }
+    ],
+    "unresolvedFields": [
+      "transaction_date",
+      "payment_status",
+      "payer_account"
+    ]
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

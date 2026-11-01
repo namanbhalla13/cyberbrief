@@ -1,0 +1,59 @@
+{
+  "spec": {
+    "name": "S03",
+    "amount_text": "\u20b97,000.00",
+    "reference": "HO2-7000",
+    "reference_label": "UPI Ref No",
+    "status": "successful",
+    "direction": "debit",
+    "date_text": "14 Oct 2026, 09:10 AM",
+    "payee_name": "Gadget Galaxy Deals",
+    "payee_vpa": "gadgetgalaxy.demo@demobank",
+    "payer_vpa": "citizen.demo@demobank",
+    "remarks": null,
+    "injected_text": null,
+    "digit_script": "latin",
+    "layout": "variant_c",
+    "fmt": "jpg",
+    "crop": "amount_ref_only",
+    "degrade": {
+      "downscale": 0.85,
+      "jpeg_quality": 80
+    },
+    "seed": 1
+  },
+  "imageSize": [
+    612,
+    217
+  ],
+  "regions": {
+    "amount": {
+      "x": 61,
+      "y": 17,
+      "width": 249,
+      "height": 46,
+      "text": "\u20b97,000.00"
+    },
+    "payee": {
+      "x": 61,
+      "y": 76,
+      "width": 210,
+      "height": 20,
+      "text": "to Gadget Galaxy Deals"
+    },
+    "payee_vpa": {
+      "x": 61,
+      "y": 105,
+      "width": 222,
+      "height": 15,
+      "text": "gadgetgalaxy.demo@demobank"
+    },
+    "reference": {
+      "x": 61,
+      "y": 183,
+      "width": 99,
+      "height": 14,
+      "text": "HO2-7000"
+    }
+  }
+}

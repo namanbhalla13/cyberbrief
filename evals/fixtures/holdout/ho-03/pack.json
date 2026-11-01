@@ -1,0 +1,150 @@
+{
+  "packId": "ho-03",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Partial refund with a credit record",
+  "tags": [
+    "refund_update",
+    "partial_recovery"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "20f6aec5fc1221066b88fce958cfd3100a31ad29bdffaa8a9146bef451cb83e4",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "1200000",
+          "currency": "INR",
+          "reference": "HO3-D-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "R01",
+      "file": "R01.png",
+      "sha256": "77a4fea43389898f7c64b49daf6ab8ac1a30518a47db9c31f130bbbf8fee6410",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "R01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "400000",
+          "currency": "INR",
+          "reference": "HO3-RF-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "credit",
+          "date": "2026-10-22",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/R01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO3-D-0001",
+        "amountMinor": "1200000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [
+      {
+        "source": "R01",
+        "amountMinor": "400000",
+        "reference": "HO3-RF-0001",
+        "relatedToIncident": true
+      }
+    ],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "1200000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "1200000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [
+    {
+      "step": 1,
+      "sources": [
+        "S01"
+      ],
+      "expectedRecoveryState": "no_refund_reported"
+    },
+    {
+      "step": 2,
+      "sources": [
+        "R01"
+      ],
+      "afterReviewAndAllocation": {
+        "expectedRecoveryState": "partial_recovery_reviewed",
+        "outstandingMinor": "800000"
+      }
+    }
+  ],
+  "knownAmbiguities": []
+}

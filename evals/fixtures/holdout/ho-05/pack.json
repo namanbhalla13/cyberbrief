@@ -1,0 +1,221 @@
+{
+  "packId": "ho-05",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Full recovery in two refunds, then a closure letter",
+  "tags": [
+    "full_recovery",
+    "closure_reported"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "9f5559822d77aa897f5f956b6b7eb404f139e70b6a37ca28172e2639a6733b04",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "1000000",
+          "currency": "INR",
+          "reference": "HO5-D-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "R01",
+      "file": "R01.png",
+      "sha256": "2d90597662281fb7e43d573a6dbc7af594f7b2eee9bab1520cc844f64827e29b",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "R01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "600000",
+          "currency": "INR",
+          "reference": "HO5-RF-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "credit",
+          "date": "2026-10-20",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/R01.json"
+    },
+    {
+      "fixtureSourceId": "R02",
+      "file": "R02.png",
+      "sha256": "888437e0b681b9cffee30b30643f91148943518f0eb7283490c43a8a29c1fdc1",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "R02.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "400000",
+          "currency": "INR",
+          "reference": "HO5-RF-0002",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "credit",
+          "date": "2026-10-25",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/R02.json"
+    },
+    {
+      "fixtureSourceId": "O01",
+      "file": "O01.png",
+      "sha256": "9985aa751c59680e860378e1d33022942480eb8d1af17db683705d3240411d5f",
+      "kind": "supplied_official_update",
+      "sourceType": "official_communication",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        700
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "category": null,
+          "effectiveDate": "2026-10-26",
+          "reference": "HO5-ACK-3301",
+          "rawStatus": "Your complaint has been closed following confirmation of refund by the merchant.",
+          "notes": []
+        }
+      ],
+      "fixtureResponse": "fixture_responses/O01.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO5-D-0001",
+        "amountMinor": "1000000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [
+      {
+        "source": "R01",
+        "amountMinor": "600000",
+        "reference": "HO5-RF-0001",
+        "relatedToIncident": true
+      },
+      {
+        "source": "R02",
+        "amountMinor": "400000",
+        "reference": "HO5-RF-0002",
+        "relatedToIncident": true
+      }
+    ],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "1000000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "1000000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [
+    {
+      "step": 5,
+      "sources": [
+        "R01",
+        "R02"
+      ],
+      "afterReviewAndAllocation": {
+        "expectedRecoveryState": "reviewed_baseline_fully_offset",
+        "outstandingMinor": "0"
+      }
+    },
+    {
+      "step": 8,
+      "sources": [
+        "O01"
+      ],
+      "expectedOfficialCategory": "closure_reported",
+      "note": "recorded as supplied; recovery and status stay independent"
+    }
+  ],
+  "knownAmbiguities": []
+}

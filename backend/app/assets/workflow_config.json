@@ -1,0 +1,13 @@
+{
+  "department": "Demo Cyber Helpdesk (fictional)",
+  "areas": [
+    { "id": "hyderabad-central", "name": "Hyderabad Central" },
+    { "id": "hyderabad-east", "name": "Hyderabad East" }
+  ],
+  "routingPolicy": "A report goes to an officer who covers the area the citizen chose, is on duty, and has room for another case. Language and expertise only order the officers who already qualify. Nothing is inferred from an IP address or from the story.",
+  "banks": [
+    { "id": "demobank", "name": "DemoBank (fictional)", "contact": "recoveries@demobank.example", "vpaSuffix": "@demobank", "integration": { "type": "sandbox" } }
+  ],
+  "bankReplyDays": 3,
+  "officialContact": { "department": "Demo Cyber Helpdesk (fictional)", "email": "helpdesk@cyberbrief.example", "phone": null }
+}

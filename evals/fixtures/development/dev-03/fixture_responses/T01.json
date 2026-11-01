@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I paid INR 2,499 to HomeMart Essentials on 14 October 2026 for a mixer that never came.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "INR 2499",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid",
+        "dateRaw": null,
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "I paid INR 2,499 to HomeMart Essentials on 14 October 2026 for a mixer that neve",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

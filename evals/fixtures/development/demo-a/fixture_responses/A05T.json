@@ -1,0 +1,47 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "typed_account",
+    "language": "en",
+    "visibleText": "I ordered clothes from Trendy Threads Store on the twelfth of October. I paid them twenty five thousand rupees in total through U P I. Nothing was delivered and they stopped replying. The last payment was yesterday and still shows as pending.",
+    "observations": [
+      {
+        "kind": "claim",
+        "amountRaw": "twenty five thousand rupees",
+        "currency": "INR",
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": null,
+        "directionRaw": "paid them",
+        "dateRaw": "the twelfth of October",
+        "counterpartyRaw": "Trendy Threads Store",
+        "accountScopeRaw": null,
+        "supportingQuote": "I paid them twenty five thousand rupees in total through U P I",
+        "issues": [
+          "amount_in_words"
+        ]
+      },
+      {
+        "kind": "claim",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": null,
+        "referenceType": null,
+        "statusRaw": "pending",
+        "directionRaw": "paid",
+        "dateRaw": "yesterday",
+        "counterpartyRaw": null,
+        "accountScopeRaw": null,
+        "supportingQuote": "The last payment was yesterday and still shows as pending",
+        "issues": [
+          "relative_date",
+          "amount_missing"
+        ]
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

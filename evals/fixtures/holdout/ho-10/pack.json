@@ -1,0 +1,148 @@
+{
+  "packId": "ho-10",
+  "split": "holdout",
+  "schemaVersion": "1",
+  "title": "Older notice uploaded after a newer one",
+  "tags": [
+    "status_update",
+    "effective_date_order"
+  ],
+  "labelProvenance": {
+    "author": "fixture designer",
+    "method": "derived from generator specifications (synthetic); declared extractor imperfections listed per source; never model output",
+    "labelledAt": "2026-10-26"
+  },
+  "generator": {
+    "script": "scripts/fixtures/build_dataset.py",
+    "seed": 1
+  },
+  "sources": [
+    {
+      "fixtureSourceId": "S01",
+      "file": "S01.png",
+      "sha256": "6d543b031cd4856bddb95a742b14455dc1a2daeee515850a78a6ffc19a6a615d",
+      "kind": "image",
+      "sourceType": "receipt",
+      "mediaType": "image/png",
+      "imageSize": [
+        720,
+        1280
+      ],
+      "injectedText": null,
+      "regionsFile": "S01.regions.json",
+      "expectedObservations": [
+        {
+          "amountMinor": "275000",
+          "currency": "INR",
+          "reference": "HO10-D-0001",
+          "referenceTruncatedInImage": false,
+          "status": "successful",
+          "direction": "debit",
+          "date": "2026-10-14",
+          "includeInIncident": true,
+          "layout": "variant_a",
+          "digitScript": "latin",
+          "crop": null,
+          "degrade": {},
+          "injectedText": null,
+          "readable": {
+            "amount": true,
+            "reference": true,
+            "status": true,
+            "date": true
+          },
+          "notes": []
+        }
+      ],
+      "declaredImperfections": {},
+      "fixtureResponse": "fixture_responses/S01.json"
+    },
+    {
+      "fixtureSourceId": "O01",
+      "file": "O01.png",
+      "sha256": "c3ac8c68fcda24480ce6ce15a4fb351d3c7026e5a45ab15c120654a862dbd5f1",
+      "kind": "supplied_official_update",
+      "sourceType": "official_communication",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        700
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "category": null,
+          "effectiveDate": "2026-10-24",
+          "reference": "HO10-ACK-5501",
+          "rawStatus": "Your complaint has been forwarded to the concerned bank for necessary action.",
+          "notes": []
+        }
+      ],
+      "fixtureResponse": "fixture_responses/O01.json"
+    },
+    {
+      "fixtureSourceId": "O02",
+      "file": "O02.png",
+      "sha256": "1772e0b3620e33ebbf291ac3c471cd7634d7775851ecf80c9f0cc8def5227a96",
+      "kind": "supplied_official_update",
+      "sourceType": "official_communication",
+      "mediaType": "image/png",
+      "imageSize": [
+        900,
+        700
+      ],
+      "injectedText": null,
+      "expectedObservations": [
+        {
+          "category": null,
+          "effectiveDate": "2026-10-18",
+          "reference": "HO10-ACK-5501",
+          "rawStatus": "Your complaint has been registered and acknowledged.",
+          "notes": []
+        }
+      ],
+      "fixtureResponse": "fixture_responses/O02.json"
+    }
+  ],
+  "approvedCanonical": {
+    "payments": [
+      {
+        "reference": "HO10-D-0001",
+        "amountMinor": "275000",
+        "currency": "INR",
+        "status": "successful",
+        "includeInIncident": true,
+        "sources": [
+          "S01"
+        ]
+      }
+    ],
+    "refunds": [],
+    "duplicateCandidates": [],
+    "excluded": [],
+    "citizenReportedAmountMinor": "275000",
+    "expectedTotals": {
+      "reviewedDebitMinor": "275000",
+      "pendingMinor": "0"
+    }
+  },
+  "updates": [
+    {
+      "step": 1,
+      "sources": [
+        "O01"
+      ],
+      "expectedOfficialCategory": "forwarded",
+      "expectedOfficialEffective": "2026-10-24"
+    },
+    {
+      "step": 2,
+      "sources": [
+        "O02"
+      ],
+      "expectedLatestStillEffective": "2026-10-24",
+      "note": "older effective date does not supersede"
+    }
+  ],
+  "knownAmbiguities": []
+}

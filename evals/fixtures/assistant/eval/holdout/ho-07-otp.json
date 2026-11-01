@@ -1,0 +1,14 @@
+{
+  "evalId": "ho-07-otp",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "The caller asked for my OTP 556677, should I give it?",
+      "expect": {
+        "help": [
+          "never-share"
+        ]
+      }
+    }
+  ]
+}

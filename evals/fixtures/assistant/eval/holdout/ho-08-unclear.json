@@ -1,0 +1,12 @@
+{
+  "evalId": "ho-08-unclear",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "I paid 500 by UPI for an online course and I am not sure if it is real. I have not received anything yet.",
+      "expect": {
+        "suggestion": "register"
+      }
+    }
+  ]
+}

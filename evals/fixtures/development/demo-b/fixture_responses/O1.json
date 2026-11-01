@@ -1,0 +1,28 @@
+{
+  "envelope": {
+    "schemaVersion": "1",
+    "sourceType": "official_communication",
+    "language": "en",
+    "visibleText": "Demo Cyber Helpdesk (fictional) Complaint acknowledgement Complaint reference: DEMO-B-ACK-7781 Date: 20 Oct 2026 Dear complainant, Your complaint has been acknowledged and forwarded to the concerned bank for necessary action. You will be informed of further developments. This communication is fictional demo material.",
+    "observations": [
+      {
+        "kind": "status_message",
+        "amountRaw": null,
+        "currency": null,
+        "referenceRaw": "DEMO-B-ACK-7781",
+        "referenceType": "complaint reference",
+        "statusRaw": "Your complaint has been acknowledged and forwarded to the concerned bank for necessary action. You will be informed of further developments.",
+        "directionRaw": null,
+        "dateRaw": "20 Oct 2026",
+        "counterpartyRaw": "Demo Cyber Helpdesk (fictional)",
+        "accountScopeRaw": null,
+        "supportingQuote": "Your complaint has been acknowledged and forwarded to the concerned bank for nec",
+        "issues": []
+      }
+    ],
+    "unresolvedFields": []
+  },
+  "usage": {
+    "note": "fixture replay; no tokens billed"
+  }
+}

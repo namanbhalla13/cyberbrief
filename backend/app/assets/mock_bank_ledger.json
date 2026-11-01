@@ -1,0 +1,12 @@
+{
+  "ledgerName": "DemoBank simulated ledger",
+  "ledgerVersion": "mock-ledger-1",
+  "notice": "Simulated bank record: a ledger of fictional entries written for this demo. No bank was contacted, and nothing here is a real bank's answer.",
+  "entries": [
+    { "reference": "DEMO-A-001", "amountMinor": "1000000", "currency": "INR", "direction": "debit", "status": "successful", "date": "2026-10-12", "counterparty": "Trendy Threads Store" },
+    { "reference": "DEMO-A-002", "amountMinor": "1000000", "currency": "INR", "direction": "debit", "status": "successful", "date": "2026-10-12", "counterparty": "Trendy Threads Store" },
+    { "reference": "DEMO-A-003", "amountMinor": "500000", "currency": "INR", "direction": "debit", "status": "failed", "date": "2026-10-13", "counterparty": "Trendy Threads Store" },
+    { "reference": "DEMO-B-001", "amountMinor": "1000000", "currency": "INR", "direction": "debit", "status": "successful", "date": "2026-10-15", "counterparty": "Gadget Galaxy Deals" },
+    { "reference": "DEMO-B-002", "amountMinor": "1000000", "currency": "INR", "direction": "debit", "status": "successful", "date": "2026-10-15", "counterparty": "Gadget Galaxy Deals" }
+  ]
+}

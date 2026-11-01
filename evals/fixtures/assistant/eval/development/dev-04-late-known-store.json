@@ -1,0 +1,12 @@
+{
+  "evalId": "dev-04-late-known-store",
+  "label": "Fictional. Written for evaluation; never real cases.",
+  "turns": [
+    {
+      "citizen": "My order from a big shopping app is two weeks late. I paid 1,200 by card. I don't think it is a scam, it is just slow.",
+      "expect": {
+        "suggestion": "check_with_citizen"
+      }
+    }
+  ]
+}

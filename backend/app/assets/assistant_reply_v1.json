@@ -1,0 +1,60 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["topic", "intent", "language", "reply", "slotUpdates", "helpIds", "actions", "lookups", "draft"],
+  "properties": {
+    "topic": { "type": "string", "enum": ["on_topic", "off_topic"] },
+    "intent": {
+      "type": "string",
+      "enum": ["describe_incident", "answer_question", "ask_status", "ask_help", "give_update", "request_draft",
+               "request_submit", "request_close", "greeting", "other"]
+    },
+    "language": { "type": "string", "enum": ["en", "hi", "hinglish"] },
+    "reply": { "type": "string" },
+    "slotUpdates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["slot", "value", "quote"],
+        "properties": {
+          "slot": { "type": "string", "enum": ["money_paid", "payment_method", "what_happened", "when", "believes_scam"] },
+          "value": { "type": "string" },
+          "quote": { "type": "string" }
+        }
+      }
+    },
+    "helpIds": { "type": "array", "items": { "type": "string" } },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["type", "questionId", "text", "amountText"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["offer_start_complaint", "offer_update_draft", "offer_answer_question", "offer_refund_report",
+                     "offer_official_update", "offer_submit", "offer_close"]
+          },
+          "questionId": { "type": ["string", "null"] },
+          "text": { "type": ["string", "null"] },
+          "amountText": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "lookups": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["details", "evidence", "recap", "my_complaints", "next_step"] }
+    },
+    "draft": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "account"],
+      "properties": {
+        "title": { "type": ["string", "null"] },
+        "account": { "type": ["string", "null"] }
+      }
+    }
+  }
+}
